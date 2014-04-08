@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Graphics="Microsoft.Xna.Framework.Content.Pipeline.Graphics" xmlns:Framework="Microsoft.Xna.Framework">
+  <Asset Type="Graphics:MeshContent">
+    <Name>Box01</Name>
+    <Identity>
+      <SourceFilename>C:\Users\Nikola\Documents\Visual Studio 2010\Projects\WindowsGame1\WindowsGame1\WindowsGame1Content\Models\cubeUV.FBX</SourceFilename>
+      <SourceTool>FbxImporter</SourceTool>
+    </Identity>
+    <OpaqueData>
+      <Data Key="UDP3DSMAX">MapChannel:1 = UVChannel_1
+</Data>
+      <Data Key="MaxHandle" Type="int">1</Data>
+    </OpaqueData>
+    <Transform>2.54 0 0 0 0 7.19523466E-16 -2.54 0 0 2.54 7.19523466E-16 0 0 0 0 1</Transform>
+    <Positions>-8.28475 -8.28475 -8.284752 8.28475 -8.28475 -8.284752 -8.28475 8.28475 -8.284752 8.28475 8.28475 -8.284752 -8.28475 -8.28475 8.284748 8.28475 -8.28475 8.284748 -8.28475 8.28475 8.284748 8.28475 8.28475 8.284748</Positions>
+    <Geometry>
+      <Batch>
+        <Indices>2 1 0 0 3 2 6 5 4 4 7 6 10 9 8 8 11 10 14 13 12 12 15 14 18 17 16 16 19 18 22 21 20 20 23 22</Indices>
+        <Vertices>
+          <PositionIndices>0 2 3 1 4 5 7 6 0 1 5 4 1 3 7 5 3 2 6 7 2 0 4 6</PositionIndices>
+          <Channels>
+            <VertexChannel Name="Normal0" ElementType="Framework:Vector3">0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 1 0 0 1 0 0 1 0 0 1 0 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0</VertexChannel>
+            <VertexChannel Name="TextureCoordinate0" ElementType="Framework:Vector2">0.0124302264 0.008292437 0.0124302264 0.995844841 0.995844662 0.995844841 0.995844662 0.008292437 0.0174474716 0.9917598 0.9967245 0.9917598 0.9967245 0.008345127 0.0174474716 0.008345127 0.008292738 0.990000248 0.991707146 0.990000248 0.991707146 0.00244784355 0.008292738 0.00244784355 0.0189979374 0.985862732 0.998275 0.985862732 0.998275 0.0107233524 0.0189979374 0.0107233524 0.007931357 0.9974997 0.99548316 0.9974997 0.99548316 0.00167298317 0.007931357 0.00167298317 0.01 0.99 0.9934143 0.99 0.9934143 0.00244784355 0.01 0.00244784355</VertexChannel>
+          </Channels>
+        </Vertices>
+      </Batch>
+    </Geometry>
+  </Asset>
+</XnaContent>
