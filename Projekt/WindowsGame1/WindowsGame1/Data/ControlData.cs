@@ -8,5 +8,6 @@ namespace WindowsGame1
     public static class ControlData
     {
         public static int X = 0, Y = 0, Width = 0, Height = 0;
+
     }
 }

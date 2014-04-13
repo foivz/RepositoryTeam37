@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Xna.Framework;
@@ -14,19 +14,27 @@ using System.Runtime.InteropServices;
 
 namespace WindowsGame1
 {
+
     class User32
     {
         [DllImport("user32.dll")]
         public static extern void SetWindowPos(uint Hwnd, int Level, int X, int Y, int W, int H, uint Flags);
     }
    
+    /// <summary>
+    /// Primarna klasa XNA Frameworka koja rukuje sa renderiranjem resursa koje postavljamu pomoću MainForm.
+    /// </summary>
     public class Game1 : Microsoft.Xna.Framework.Game
     {
+        //Default
         public static GraphicsDeviceManager graphics;
         public static SpriteBatch spriteBatch;
 
+        //Kontrolne varijable za vidljivost
         public  bool needsToExit = false;
+        public bool needsToMinimize = false;
 
+        //Kontrolne varjable za poziciju i veličinu 3D prozora
         public Control control;
         public Form gWindow;
 
@@ -47,8 +55,7 @@ namespace WindowsGame1
      
         protected override void LoadContent()
         {
-            
-
+            //Postavljanje svih početnih postavki pri paljenju programa.
             graphics.ApplyChanges();
 
             control = Form.FromHandle(this.Window.Handle);
@@ -57,7 +64,14 @@ namespace WindowsGame1
             gWindow.TopMost = true;
 
             spriteBatch = new SpriteBatch(GraphicsDevice);
+
+            //Ovaj dio zove Windows API da mu kaže da 3D render mora uvjek biti "on top" prozor, u protivnom
+            //on nestane svaki puta kad se na formi nešto klikne.
             User32.SetWindowPos((uint)this.Window.Handle, -1, 0, 0, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight, 0);
+
+           
+            //Tu samo učitamo standardnu kocku za prikazati, da se nešto renderira prije nego li se spojimo
+            //na bazu i odaberemo vlastite modele.
             ModelDataBase.Load(Content);
             ModelDataBase.LoadIntoRenderer(0);
 
@@ -70,24 +84,29 @@ namespace WindowsGame1
         }
 
       
+        //Update petlja se pokreće 60 puta u sekundi, jednom za za svaki frame (ili koliko računalo već stigne)
+        
         protected override void Update(GameTime gameTime)
         {
-        
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == Microsoft.Xna.Framework.Input.ButtonState.Pressed)
-                this.Exit();
+            //Provjera kontrolnih petlji za izlaz iz programa (ili samo sakrivanje prozora)
 
-            if (Keyboard.GetState().IsKeyDown(Microsoft.Xna.Framework.Input.Keys.Escape))
-                this.Exit();
+            if (needsToMinimize)
+                ((Form)Form.FromHandle(this.Window.Handle)).Visible = false;
+            else
+                ((Form)Form.FromHandle(this.Window.Handle)).Visible = true;
 
             if (needsToExit) this.Exit();
 
+            //Premještanje prozora i veličine na nove vrijednosti 
+            //Pošto se ovo dešava u svakom update loop, čim pomoću MainForm eventova
+            //promjenimo poziciju ili veličinu, promjena se očituje instantno
             System.Drawing.Point location = new System.Drawing.Point(ControlData.X, ControlData.Y);
 
             gWindow.DesktopLocation = location;
             gWindow.Width = ControlData.Width;
             gWindow.Height = ControlData.Height;
 
-
+            //Render Update
             Renderer.CameraRotationUpdate();
             Renderer.ShaderUpdate();
 
@@ -95,13 +114,16 @@ namespace WindowsGame1
         }
 
       
+        //Draw se zove odmah nakon Update petlje, te nakon ove funkcije program miruje dok nije 
+        //vrijeme za izcrtati sljedeći frame.
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.DarkGray);
+            GraphicsDevice.Clear(Color.DarkGray);   //Postavljanje pozadinske boje na tamno sivu
 
-            Renderer.Render();
+            Renderer.Render();                      //Izrenderirati frame sa trenutnim resursima
+                                                    //postavljenim u 3D rendereru
 
-            base.Draw(gameTime);
+            base.Draw(gameTime);                    
         }
     }
 }

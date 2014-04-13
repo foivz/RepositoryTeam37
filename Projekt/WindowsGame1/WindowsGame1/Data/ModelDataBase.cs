@@ -7,6 +7,10 @@ using Microsoft.Xna.Framework.Content;
 
 namespace WindowsGame1
 {
+    /// <summary>
+    /// Testna klasa za testiranje funkcionalnosti programa pomoću offline resursa učitanih sa
+    /// ContentManager klasom.
+    /// </summary>
     public static class ModelDataBase
     {
         public struct Package

@@ -76,7 +76,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\ControlData.cs" />
+    <Compile Include="Data\Korisnik.cs" />
     <Compile Include="Data\ModelDataBase.cs" />
+    <Compile Include="Data\Objekt3D.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,8 +98,9 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WindowsGame1Content\WindowsGame1Content.contentproj">
-      <Name>WindowsGame1Content</Name>
+      <Name>WindowsGame1Content %28Content%29</Name>
       <XnaReferenceType>Content</XnaReferenceType>
+      <Project>{1BA1F8CC-6FAC-4FB8-BF2F-A38D3B3F36F4}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
