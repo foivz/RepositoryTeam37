@@ -28,7 +28,6 @@ namespace WindowsGame1
         /// <param name="con"></param>
         public static void Load(ContentManager con)
         {
-
             Package temp = new Package();
 
             temp.model = con.Load<Model>("Models/cubeUV");

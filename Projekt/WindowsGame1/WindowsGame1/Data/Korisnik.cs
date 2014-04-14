@@ -14,7 +14,22 @@ namespace WindowsGame1.Data
             Administrator
         }
 
-        public string korisnickoIme, lozinka, email;
+        public string korisnickoIme, email;
+        public tipKorisnika TipKorisnika;
+
+        public List<Objekt3D> dodaniObjekti = new List<Objekt3D>();
+
+        private string lozinka;
+
+        public Korisnik(string kIme, string password, string _email)
+        {
+            korisnickoIme = kIme;
+            lozinka = password;
+            email = _email;
+
+            TipKorisnika = tipKorisnika.Korisnik;
+        }
+
 
 
     }
