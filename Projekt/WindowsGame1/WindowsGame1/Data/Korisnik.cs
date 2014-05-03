@@ -14,12 +14,11 @@ namespace WindowsGame1.Data
             Administrator
         }
 
-        public string korisnickoIme, email;
+        private string korisnickoIme;
+		private string lozinka;
+		private string email;
         public tipKorisnika TipKorisnika;
-
-        public List<Objekt3D> dodaniObjekti = new List<Objekt3D>();
-
-        private string lozinka;
+		private List<Objekt3D> izradeniObjekti = new List<Objekt3D>();
 
         public Korisnik(string kIme, string password, string _email)
         {
@@ -30,7 +29,18 @@ namespace WindowsGame1.Data
             TipKorisnika = tipKorisnika.Korisnik;
         }
 
+		public void dodaj3DObjekt(Objekt3D objekt)
+		{
 
+		}
+		
+		public List<Objekt3D> Korisnikove3DObjekte()
+		{
+            List<Objekt3D> lista = new List<Objekt3D>();
+
+
+            return lista;
+		}
 
     }
 }

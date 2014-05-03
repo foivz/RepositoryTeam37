@@ -9,3 +9,14 @@ C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsGame1\Wind
 C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsGame1\WindowsGame1\obj\x86\Debug\Baza_3D.csproj.GenerateResource.Cache
 C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsGame1\WindowsGame1\obj\x86\Debug\WindowsGame1.exe
 C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsGame1\WindowsGame1\obj\x86\Debug\WindowsGame1.pdb
+D:\Code projects\Projekt_PI\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\Shaders\GenericShader.xnb
+D:\Code projects\Projekt_PI\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\Models\cubeUV.xnb
+D:\Code projects\Projekt_PI\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\Textures\avatar.xnb
+D:\Code projects\Projekt_PI\WindowsGame1\WindowsGame1\bin\x86\Debug\WindowsGame1.exe
+D:\Code projects\Projekt_PI\WindowsGame1\WindowsGame1\bin\x86\Debug\WindowsGame1.pdb
+D:\Code projects\Projekt_PI\WindowsGame1\WindowsGame1\obj\x86\Debug\Baza_3D.csprojResolveAssemblyReference.cache
+D:\Code projects\Projekt_PI\WindowsGame1\WindowsGame1\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+D:\Code projects\Projekt_PI\WindowsGame1\WindowsGame1\obj\x86\Debug\WindowsGame1.MainForm.resources
+D:\Code projects\Projekt_PI\WindowsGame1\WindowsGame1\obj\x86\Debug\Baza_3D.csproj.GenerateResource.Cache
+D:\Code projects\Projekt_PI\WindowsGame1\WindowsGame1\obj\x86\Debug\WindowsGame1.exe
+D:\Code projects\Projekt_PI\WindowsGame1\WindowsGame1\obj\x86\Debug\WindowsGame1.pdb
