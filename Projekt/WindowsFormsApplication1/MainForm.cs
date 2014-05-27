@@ -10,8 +10,9 @@ using System.Windows.Forms;
 using Microsoft.Xna.Framework.Graphics;
 using System.IO;
 using Microsoft.Xna.Framework;
+using WindowsGame1;
 
-namespace WindowsGame1
+namespace Forma
 {
     public partial class MainForm : Form
     {
@@ -30,6 +31,10 @@ namespace WindowsGame1
         //"Message pump" objekta u paraleli na istom threadu. 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'baza1DataSet1.tekstura' table. You can move, or remove it, as needed.
+            this.teksturaTableAdapter.Fill(this.baza1DataSet1.tekstura);
+            // TODO: This line of code loads data into the 'baza1DataSet._3D_objekt' table. You can move, or remove it, as needed.
+            this._3D_objektTableAdapter.Fill(this.baza1DataSet._3D_objekt);
             Thread game = new Thread(() =>
             {
                 game1 = new Game1();
@@ -78,6 +83,11 @@ namespace WindowsGame1
         private void MainForm_Paint(object sender, PaintEventArgs e)
         {
            
+        }
+
+        private void kategorija1ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
         }
 
    }

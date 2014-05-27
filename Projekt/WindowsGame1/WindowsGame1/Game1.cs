@@ -12,9 +12,13 @@ using System.IO;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 
+
 namespace WindowsGame1
 {
 
+    /// <summary>
+    /// Pomoćna klasa za postavljanje prioriteta prozora koji prikazuje 3D render.
+    /// </summary>
     class User32
     {
         [DllImport("user32.dll")]
@@ -33,6 +37,7 @@ namespace WindowsGame1
         //Kontrolne varijable za vidljivost
         public  bool needsToExit = false;
         public bool needsToMinimize = false;
+        
 
         //Kontrolne varjable za poziciju i veličinu 3D prozora
         public Control control;
@@ -53,6 +58,9 @@ namespace WindowsGame1
         }
 
      
+        /// <summary>
+        /// Funkcija za učitavanje početnih resursa pri paljenju programa.
+        /// </summary>
         protected override void LoadContent()
         {
             //Postavljanje svih početnih postavki pri paljenju programa.
@@ -83,9 +91,6 @@ namespace WindowsGame1
            
         }
 
-      
-        //Update petlja se pokreće 60 puta u sekundi, jednom za za svaki frame (ili koliko računalo već stigne)
-        
         protected override void Update(GameTime gameTime)
         {
             //Provjera kontrolnih petlji za izlaz iz programa (ili samo sakrivanje prozora)
@@ -122,7 +127,6 @@ namespace WindowsGame1
 
             Renderer.Render();                      //Izrenderirati frame sa trenutnim resursima
                                                     //postavljenim u 3D rendereru
-
             base.Draw(gameTime);                    
         }
     }

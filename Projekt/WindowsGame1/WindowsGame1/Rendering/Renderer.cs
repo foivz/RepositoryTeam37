@@ -9,6 +9,7 @@ namespace WindowsGame1
 {
     public static class Renderer
     {
+        
         public static Matrix
             World = Matrix.Identity,
             view, projection;

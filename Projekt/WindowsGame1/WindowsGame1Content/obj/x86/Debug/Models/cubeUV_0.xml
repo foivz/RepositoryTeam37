@@ -3,7 +3,7 @@
   <Asset Type="Graphics:MeshContent">
     <Name>Box01</Name>
     <Identity>
-      <SourceFilename>D:\Code projects\Projekt_PI\WindowsGame1\WindowsGame1Content\Models\cubeUV.FBX</SourceFilename>
+      <SourceFilename>C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsGame1\WindowsGame1Content\Models\cubeUV.FBX</SourceFilename>
       <SourceTool>FbxImporter</SourceTool>
     </Identity>
     <OpaqueData>

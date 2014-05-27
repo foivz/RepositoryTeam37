@@ -13,9 +13,8 @@ namespace WindowsGame1
         /// </summary>
         static void Main(string[] args)
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            Game1 game = new Game1();
+            game.Run();
 
         }
     }

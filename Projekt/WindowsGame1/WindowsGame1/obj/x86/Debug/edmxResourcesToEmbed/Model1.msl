@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Baza1ModelStoreContainer" CdmEntityContainer="Baza1Entities">
+    <EntitySetMapping Name="C3D_objekt">
+      <EntityTypeMapping TypeName="Baza1Model.C3D_objekt">
+        <MappingFragment StoreEntitySet="3D_objekt">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="kategorija" ColumnName="kategorija" />
+          <ScalarProperty Name="model" ColumnName="model" />
+          <ScalarProperty Name="naziv" ColumnName="naziv" />
+          <ScalarProperty Name="opis" ColumnName="opis" />
+          <ScalarProperty Name="korisnikid" ColumnName="korisnikid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="kategorijas">
+      <EntityTypeMapping TypeName="Baza1Model.kategorija">
+        <MappingFragment StoreEntitySet="kategorija">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="naziv" ColumnName="naziv" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="korisniks">
+      <EntityTypeMapping TypeName="Baza1Model.korisnik">
+        <MappingFragment StoreEntitySet="korisnik">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="korisnicko_ime" ColumnName="korisnicko_ime" />
+          <ScalarProperty Name="lozinka" ColumnName="lozinka" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="tip_korisnika" ColumnName="tip_korisnika" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="shaders">
+      <EntityTypeMapping TypeName="Baza1Model.shader">
+        <MappingFragment StoreEntitySet="shader">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="shader1" ColumnName="shader" />
+          <ScalarProperty Name="naziv" ColumnName="naziv" />
+          <ScalarProperty Name="C_3D_objekt" ColumnName="_3D_objekt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="teksturas">
+      <EntityTypeMapping TypeName="Baza1Model.tekstura">
+        <MappingFragment StoreEntitySet="tekstura">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="C_3D_objekt" ColumnName="_3D_objekt" />
+          <ScalarProperty Name="tekstura1" ColumnName="tekstura" />
+          <ScalarProperty Name="naziv" ColumnName="naziv" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tip_korisnika">
+      <EntityTypeMapping TypeName="Baza1Model.tip_korisnika">
+        <MappingFragment StoreEntitySet="tip_korisnika">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="naziv" ColumnName="naziv" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -7,8 +7,8 @@
       <Importer>EffectImporter</Importer>
       <Processor>EffectProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\Code projects\Projekt_PI\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\Shaders\GenericShader.xnb</Output>
-      <Time>2014-04-08T18:19:12+02:00</Time>
+      <Output>C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\Shaders\GenericShader.xnb</Output>
+      <Time>2014-05-24T13:27:59.271506+02:00</Time>
     </Item>
     <Item>
       <Source>Models\cubeUV.FBX</Source>
@@ -16,11 +16,11 @@
       <Importer>FbxImporter</Importer>
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\Code projects\Projekt_PI\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\Models\cubeUV.xnb</Output>
-      <Time>2014-04-08T18:19:12+02:00</Time>
+      <Output>C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\Models\cubeUV.xnb</Output>
+      <Time>2014-05-24T13:27:59.2645056+02:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Models\cubeUV_0.xml</Key>
-        <Value>2014-05-03T10:21:18.3765446+02:00</Value>
+        <Value>2014-05-27T20:41:34.4849641+02:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -29,15 +29,15 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\Code projects\Projekt_PI\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\Textures\avatar.xnb</Output>
-      <Time>2014-04-08T18:19:12+02:00</Time>
+      <Output>C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\Textures\avatar.xnb</Output>
+      <Time>2014-05-24T13:27:59.2825066+02:00</Time>
     </Item>
     <Item>
       <Source>Models\cubeUV.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Models\cubeUV_0.xml</Output>
-      <Time>2014-04-08T18:19:12+02:00</Time>
+      <Time>2014-05-24T13:27:59.2645056+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -45,10 +45,10 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>D:\Code projects\Projekt_PI\WindowsGame1\WindowsGame1Content\</RootDirectory>
-      <LoggerRootDirectory>D:\Code projects\Projekt_PI\WindowsGame1\WindowsGame1\</LoggerRootDirectory>
-      <IntermediateDirectory>D:\Code projects\Projekt_PI\WindowsGame1\WindowsGame1Content\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>D:\Code projects\Projekt_PI\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsGame1\WindowsGame1Content\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsGame1\WindowsGame1\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsGame1\WindowsGame1Content\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
@@ -77,7 +77,7 @@
       </Assembly>
       <Assembly>
         <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2013-07-08T12:32:06.64105+02:00</Value>
+        <Value>2014-05-27T10:37:47.8074068+02:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

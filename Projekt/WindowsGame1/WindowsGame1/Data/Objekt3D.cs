@@ -36,7 +36,5 @@ namespace WindowsGame1.Data
             shaderArray = shaderi;
         }
 
-
-
     }
 }

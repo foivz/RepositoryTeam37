@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Baza1Model1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="Baza1Model1StoreContainer">
+    <EntitySet Name="3D_objekt" EntityType="Baza1Model1.Store.3D_objekt" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="kategorija" EntityType="Baza1Model1.Store.kategorija" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="korisnik" EntityType="Baza1Model1.Store.korisnik" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="shader" EntityType="Baza1Model1.Store.shader" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tekstura" EntityType="Baza1Model1.Store.tekstura" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tip_korisnika" EntityType="Baza1Model1.Store.tip_korisnika" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="3D_objekt">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="kategorija" Type="int" Nullable="false" />
+    <Property Name="model" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="naziv" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="opis" Type="varchar" MaxLength="100" />
+    <Property Name="korisnikid" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="kategorija">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="naziv" Type="varchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="korisnik">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="korisnicko_ime" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="lozinka" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="email" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="tip_korisnika" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="shader">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="shader" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="naziv" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="_3D_objekt" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tekstura">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="_3D_objekt" Type="int" Nullable="false" />
+    <Property Name="tekstura" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="naziv" Type="varchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="tip_korisnika">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="naziv" Type="varchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+</Schema>
