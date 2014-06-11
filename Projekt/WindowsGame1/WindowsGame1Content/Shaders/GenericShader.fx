@@ -1,3 +1,6 @@
+﻿//Najosnovniji diffuse shader bez sjenčanja, svijetla i sjene.
+//Za brzi preview, test i debugging prije korištenja kompleksnijih shadera.
+
 float4x4 World;
 float4x4 View;
 float4x4 Projection;
@@ -14,7 +17,7 @@ struct VertexShaderInput
 {
     float4 Position : POSITION0;
 	float2 texCoord : TEXCOORD0;
-  
+
 };
 
 struct VertexShaderOutput
@@ -46,7 +49,6 @@ technique Technique1
 {
     pass Pass1
     {
-
         VertexShader = compile vs_2_0 VertexShaderFunction();
         PixelShader = compile ps_2_0 PixelShaderFunction();
     }

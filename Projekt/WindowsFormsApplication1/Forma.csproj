@@ -65,6 +65,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Baza1DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Baza1DataSet1.cs">
+      <DependentUpon>Baza1DataSet1.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Baza1DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

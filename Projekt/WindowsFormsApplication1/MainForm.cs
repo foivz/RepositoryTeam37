@@ -32,10 +32,12 @@ namespace Forma
         private void MainForm_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'baza1DataSet1.tekstura' table. You can move, or remove it, as needed.
-            this.teksturaTableAdapter.Fill(this.baza1DataSet1.tekstura);
+            //this.teksturaTableAdapter.Fill(this.baza1DataSet1.tekstura);
             // TODO: This line of code loads data into the 'baza1DataSet._3D_objekt' table. You can move, or remove it, as needed.
-            this._3D_objektTableAdapter.Fill(this.baza1DataSet._3D_objekt);
+            //this._3D_objektTableAdapter.Fill(this.baza1DataSet._3D_objekt);
+
             Thread game = new Thread(() =>
+
             {
                 game1 = new Game1();
                 game1.Run();

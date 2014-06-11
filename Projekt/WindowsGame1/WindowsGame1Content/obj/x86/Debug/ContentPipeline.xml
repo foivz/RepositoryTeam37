@@ -8,7 +8,7 @@
       <Processor>EffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\Shaders\GenericShader.xnb</Output>
-      <Time>2014-05-24T13:27:59.271506+02:00</Time>
+      <Time>2014-06-11T16:06:32.0068569+02:00</Time>
     </Item>
     <Item>
       <Source>Models\cubeUV.FBX</Source>
@@ -17,10 +17,10 @@
       <Processor>ModelProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\Models\cubeUV.xnb</Output>
-      <Time>2014-05-24T13:27:59.2645056+02:00</Time>
+      <Time>2014-06-11T16:06:31.9918561+02:00</Time>
       <Dependency>
         <Key>obj\x86\Debug\Models\cubeUV_0.xml</Key>
-        <Value>2014-05-27T20:41:34.4849641+02:00</Value>
+        <Value>2014-06-11T16:34:33.2920209+02:00</Value>
       </Dependency>
     </Item>
     <Item>
@@ -30,14 +30,14 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\Textures\avatar.xnb</Output>
-      <Time>2014-05-24T13:27:59.2825066+02:00</Time>
+      <Time>2014-06-11T16:06:32.0208577+02:00</Time>
     </Item>
     <Item>
       <Source>Models\cubeUV.FBX</Source>
       <Importer>FbxImporter</Importer>
       <Options>IntermediateFile, DontCacheImportedData</Options>
       <Output>obj\x86\Debug\Models\cubeUV_0.xml</Output>
-      <Time>2014-05-24T13:27:59.2645056+02:00</Time>
+      <Time>2014-06-11T16:06:31.9918561+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
