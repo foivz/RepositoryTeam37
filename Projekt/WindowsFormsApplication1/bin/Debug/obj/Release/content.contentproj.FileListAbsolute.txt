@@ -1,0 +1,2 @@
+C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsFormsApplication1\bin\Debug\obj\Release\content.contentprojResolveAssemblyReference.cache
+C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsFormsApplication1\bin\Debug\obj\content.contentproj.XactOutput.FileList.txt

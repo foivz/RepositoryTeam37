@@ -33,6 +33,7 @@ namespace WindowsGame1
         //Default
         public static GraphicsDeviceManager graphics;
         public static SpriteBatch spriteBatch;
+        public static ContentManager content;
 
         //Kontrolne varijable za vidljivost
         public  bool needsToExit = false;
@@ -47,13 +48,14 @@ namespace WindowsGame1
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-
         }
 
         
         protected override void Initialize()
         {
+            content = Content;
 
+            
             base.Initialize();
         }
 

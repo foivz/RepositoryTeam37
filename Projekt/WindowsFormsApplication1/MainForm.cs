@@ -11,6 +11,7 @@ using Microsoft.Xna.Framework.Graphics;
 using System.IO;
 using Microsoft.Xna.Framework;
 using WindowsGame1;
+using WindowsGame1.Data;
 
 namespace Forma
 {
@@ -31,10 +32,12 @@ namespace Forma
         //"Message pump" objekta u paraleli na istom threadu. 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'baza1DataSet1.tekstura' table. You can move, or remove it, as needed.
-            //this.teksturaTableAdapter.Fill(this.baza1DataSet1.tekstura);
             // TODO: This line of code loads data into the 'baza1DataSet._3D_objekt' table. You can move, or remove it, as needed.
             //this._3D_objektTableAdapter.Fill(this.baza1DataSet._3D_objekt);
+
+            //Moramo znati gdje nam je lokalni filesystem odma u startu.
+            ControlData.DajPutDoBinary();
+            Manipulator.contentBuilder = new ContentBuilder();
 
             Thread game = new Thread(() =>
 
@@ -46,6 +49,9 @@ namespace Forma
             game.Start();
 
             RemakeWindow();
+
+            toolStripStatusLabel1.Text = "Spreman";
+            toolStripStatusLabel2.Text = "";
             
         }
 
@@ -58,7 +64,7 @@ namespace Forma
             ControlData.Y = splitContainer1.Panel2.Bounds.Y + this.Location.Y + 30;
 
             ControlData.Width = splitContainer1.Panel2.Width + 3;
-            ControlData.Height = splitContainer1.Panel2.Height;
+            ControlData.Height = splitContainer1.Panel2.Height - 50;
 
             Renderer.ReLoad();
 
@@ -87,10 +93,92 @@ namespace Forma
            
         }
 
+        //Popuni DGW: Tehnologija
         private void kategorija1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            toolStripStatusLabel1.Text = "Dohvaćam popis iz baze...";
+            toolStripStatusLabel1.Invalidate();
+            this._3D_objektTableAdapter.FillByCategory(this.baza1DataSet._3D_objekt, 1);
+            toolStripStatusLabel1.Text = "Dohvaćeno " + dataGridView1.RowCount.ToString() + " modela";
         }
 
+        //Popuni DGW: Namjestaj
+        private void namjestajToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Dohvaćam popis iz baze...";
+            toolStripStatusLabel1.Invalidate();
+            this._3D_objektTableAdapter.FillByCategory(this.baza1DataSet._3D_objekt, 2);
+            toolStripStatusLabel1.Text = "Dohvaćeno " + dataGridView1.RowCount.ToString() + " modela";
+        }
+
+        //Popuni DGW: Vozila
+        private void vozilaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Dohvaćam popis iz baze...";
+            toolStripStatusLabel1.Invalidate();
+            this._3D_objektTableAdapter.FillByCategory(this.baza1DataSet._3D_objekt, 3);
+            toolStripStatusLabel1.Text = "Dohvaćeno " + dataGridView1.RowCount.ToString() + " modela";
+        }
+
+        //Popuni DGW: Arhitektura
+        private void arhitekturaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Dohvaćam popis iz baze...";
+            toolStripStatusLabel1.Invalidate();
+            this._3D_objektTableAdapter.FillByCategory(this.baza1DataSet._3D_objekt, 4);
+            toolStripStatusLabel1.Text = "Dohvaćeno " + dataGridView1.RowCount.ToString() + " modela";
+        }
+
+        //Popuni DGW: Primitives
+        private void primitivesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Dohvaćam popis iz baze...";
+            toolStripStatusLabel1.Invalidate();
+            this._3D_objektTableAdapter.FillByCategory(this.baza1DataSet._3D_objekt, 5);
+            toolStripStatusLabel1.Text = "Dohvaćeno " + dataGridView1.RowCount.ToString() + " modela";
+        }
+
+        //Popuni DGW: Ostalo/Misc
+        private void ostaloToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Dohvaćam popis iz baze...";
+            toolStripStatusLabel1.Invalidate();
+            this._3D_objektTableAdapter.FillByCategory(this.baza1DataSet._3D_objekt, 6);
+            toolStripStatusLabel1.Text = "Dohvaćeno " + dataGridView1.RowCount.ToString() + " modela";
+        }
+
+        //DGW click
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            treeView1.Nodes.Clear();
+
+            if ( dataGridView1.SelectedCells.Count > 0 )
+            {
+                toolStripStatusLabel1.Text = "Dohvaćam popis iz baze...";
+                toolStripStatusLabel1.Invalidate();
+                toolStripStatusLabel2.Text = "Kompajliram XNA resurse...";
+                toolStripStatusLabel2.Invalidate();
+
+                Manipulator.DoSelect((int)dataGridView1.SelectedCells[1].Value, (string)dataGridView1.SelectedCells[2].Value);
+
+                treeView1.ImageList = new ImageList();
+                treeView1.ImageList.ImageSize = new Size(60, 60);
+
+                for ( int i = 0; i < Manipulator.actualTextures.Count; i++ )
+                {
+                    treeView1.Nodes.Add(i.ToString(), Manipulator.actualTextures[i], i);
+                    treeView1.Nodes[i].SelectedImageIndex = i;
+                    treeView1.ImageList.Images.Add(Manipulator.texThumbnail[i]);
+                }
+                toolStripStatusLabel1.Text = "Gotovo!";
+                toolStripStatusLabel2.Text = "Dohvaćeno " + treeView1.Nodes.Count + " tekstura za " + (string)dataGridView1.SelectedCells[2].Value;
+            }
+        }
+
+        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            Manipulator.DoSelectTex(e.Node.Index);
+          
+        }
    }
 }

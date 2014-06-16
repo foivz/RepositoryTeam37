@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline" xmlns:Framework="Microsoft.Xna.Framework" xmlns:Processors="Microsoft.Xna.Framework.Content.Pipeline.Processors">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Binary\02 - Namjestaj\Fotelja_comfy\fotelj.FBX</Source>
+      <Name>Model</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>content\Model.xnb</Output>
+      <Time>2014-01-26T17:13:39.896+01:00</Time>
+      <Dependency>
+        <Key>obj\Release\fotelj_0.xml</Key>
+        <Value>2014-06-16T18:09:55.9009853+02:00</Value>
+      </Dependency>
+      <Request>content\FBX\7E627D4\fotelj.fbm\foteljaUV_0.xnb</Request>
+    </Item>
+    <Item>
+      <Source>C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Binary\02 - Namjestaj\Fotelja_comfy\foteljatex.png</Source>
+      <Name>tex0</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>content\tex0.xnb</Output>
+      <Time>2014-01-29T02:44:28.1484533+01:00</Time>
+    </Item>
+    <Item>
+      <Source>C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Binary\02 - Namjestaj\Fotelja_comfy\foteljaUV.png</Source>
+      <Name>tex1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>content\tex1.xnb</Output>
+      <Time>2014-01-26T17:11:51.403+01:00</Time>
+    </Item>
+    <Item>
+      <Source>C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Binary\02 - Namjestaj\Fotelja_comfy\fotelj.FBX</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\Release\fotelj_0.xml</Output>
+      <Time>2014-01-26T17:13:39.896+01:00</Time>
+    </Item>
+    <Item>
+      <Source>obj\Release\FBX\7E627D4\fotelj.fbm\foteljaUV.png</Source>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Parameters>
+        <Data Key="ColorKeyColor" Type="Framework:Color">FFFF00FF</Data>
+        <Data Key="ColorKeyEnabled" Type="bool">true</Data>
+        <Data Key="TextureFormat" Type="Processors:TextureProcessorOutputFormat">DxtCompressed</Data>
+        <Data Key="GenerateMipmaps" Type="bool">true</Data>
+        <Data Key="ResizeToPowerOfTwo" Type="bool">false</Data>
+        <Data Key="PremultiplyAlpha" Type="bool">true</Data>
+      </Parameters>
+      <Options>None</Options>
+      <Output>content\FBX\7E627D4\fotelj.fbm\foteljaUV_0.xnb</Output>
+      <Time>2014-06-16T18:09:55.6049683+02:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <TargetPlatform>Windows</TargetPlatform>
+      <TargetProfile>Reach</TargetProfile>
+      <BuildConfiguration>Release</BuildConfiguration>
+      <CompressContent>false</CompressContent>
+      <RootDirectory>C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsFormsApplication1\bin\Debug\</RootDirectory>
+      <LoggerRootDirectory Null="true" />
+      <IntermediateDirectory>C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsFormsApplication1\bin\Debug\obj\Release\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsFormsApplication1\bin\Debug\content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2010-08-23T12:41:18+02:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2010-08-23T12:41:18+02:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2014-05-27T10:37:47.8074068+02:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>

@@ -65,15 +65,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Baza1DataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Baza1DataSet1.cs">
-      <DependentUpon>Baza1DataSet1.xsd</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Baza1DataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Baza1DataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,17 +95,6 @@
     </None>
     <None Include="Baza1DataSet.xss">
       <DependentUpon>Baza1DataSet.xsd</DependentUpon>
-    </None>
-    <None Include="Baza1DataSet1.xsc">
-      <DependentUpon>Baza1DataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="Baza1DataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Baza1DataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Baza1DataSet1.xss">
-      <DependentUpon>Baza1DataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
