@@ -7,6 +7,7 @@ using System.Drawing;
 using Microsoft.Xna.Framework.Content;
 using System.Windows.Forms;
 using Microsoft.Xna.Framework.Graphics;
+using System.IO;
 
 namespace WindowsGame1.Data
 {
@@ -37,6 +38,7 @@ namespace WindowsGame1.Data
         /// -Najprije dobivamo preko parametara apsolutni put do foldera gdje su nam odabrani resursi.
         /// -Iz sadržaja foldera određujemo koliko imamo tekstura
         /// -Popunjavamo popis puta do tekstura, i Image resursa.
+        /// -Čistimo sve stare foldere i fajlove koje smo izgradili prijašnjim kompajliranjem
         /// -Pokrećemo run-time compiler resursa za pretvaranje FBX i PNG objekata u XNB
         /// -Učitavamo XNB resurse u Renderer da bi ih prikazali na ekran
         /// </summary>
@@ -53,7 +55,6 @@ namespace WindowsGame1.Data
             texThumbnail = new List<Image>();
             texturePaths = new List<string>();
 
-            //System.Windows.Forms.MessageBox.Show(contentBuilder.OutputDirectory);
 
             //Prepoznavanje sadržaja foldera. 
             for ( int i = 0; i < contents.Length; i++ )
@@ -74,16 +75,25 @@ namespace WindowsGame1.Data
                 }
             }
 
-            //TO DO:
+            //Počisti stare XNB fajlove ako postoje
+            string path = contentBuilder.OutputDirectory;
+            DirectoryInfo info = new DirectoryInfo(path);
+            info = info.Parent;
+            info = info.Parent;
+            path = info.FullName;
 
-            //Resource compile
+            if ( Directory.Exists(path) ) 
+            Directory.Delete(path, true);
+          
+
+            //Kompajliraj nove resurse
             contentBuilder.Clear();
             contentBuilder.Add(meshPath, "Model", null, "ModelProcessor");
-
 
             for ( int i = 0; i < texturePaths.Count; i++ )
             {
                 contentBuilder.Add(texturePaths[i], "tex" + i.ToString(), null, "TextureProcessor");
+               
             }
 
             string error = contentBuilder.Build();
@@ -92,9 +102,17 @@ namespace WindowsGame1.Data
 
             if ( string.IsNullOrEmpty(error) )
             {
-                //Load new resources into Renderer
-                Renderer.mesh = Game1.content.Load<Model>("Model");
-                Renderer.shader.Parameters["tex0"].SetValue(Game1.content.Load<Texture2D>("tex0"));
+                //Pošto koristimo jedan statični mesh u Rendereru, moramo prvo Unloadati sve.
+                //Srećom imamo samo jedan mesh, jedan shader i jednu teksturu za reloadati.
+                Game1.content.Unload();
+
+                Renderer.mesh = Game1.content.Load<Model>("..\\build\\content\\Model");
+                Renderer.shader = Game1.content.Load<Effect>("Shaders\\GenericShader");
+                Renderer.cursor = Game1.content.Load<Texture2D>("Textures/Cursor");
+                
+                Texture2D tex = Game1.content.Load<Texture2D>("..\\build\\content\\tex0");
+                Renderer.shader.Parameters["tex0"].SetValue(tex);
+
                 Renderer.ReLoad();
             }
             else
@@ -106,7 +124,7 @@ namespace WindowsGame1.Data
 
         public static void DoSelectTex(int index)
         {
-            Renderer.shader.Parameters["tex0"].SetValue(Game1.content.Load<Texture2D>("tex" + index.ToString()));
+            Renderer.shader.Parameters["tex0"].SetValue(Game1.content.Load<Texture2D>("..\\build\\content\\tex" + index.ToString()));
             Renderer.ReLoad();
         }
     }

@@ -18,3 +18,4 @@ C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsFormsAppli
 C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsFormsApplication1\bin\Debug\Microsoft.Xna.Framework.Graphics.xml
 C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
 C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsFormsApplication1\bin\Debug\Content\Textures\Cursor.xnb

@@ -57,13 +57,7 @@ namespace WindowsGame1
 
         // Temporary directories used by the content build.
         string buildDirectory;
-        string processDirectory;
-        string baseDirectory;
         public string absolutePath;
-
-
-        // Generate unique directory names if there is more than one ContentBuilder.
-        static int directorySalt;
 
 
         // Have we been disposed?
@@ -128,8 +122,13 @@ namespace WindowsGame1
             {
                 isDisposed = true;
 
-                //DeleteTempDirectory();
+                DeleteTempDirectory();
             }
+        }
+
+        private void DeleteTempDirectory()
+        {
+            Directory.Delete(buildDirectory, true);
         }
 
 
@@ -226,7 +225,7 @@ namespace WindowsGame1
             BuildRequestData request = new BuildRequestData(buildProject.CreateProjectInstance(), new string[0]);
             BuildSubmission submission = BuildManager.DefaultBuildManager.PendBuildRequest(request);
 
-            submission.ExecuteAsync(null, null);
+            submission.Execute();
 
             // Wait for the build to finish.
             submission.WaitHandle.WaitOne();
@@ -238,6 +237,8 @@ namespace WindowsGame1
             {
                // return string.Join("\n", errorLogger.Errors.ToArray());
             }
+
+            
             
             return null;
         }
@@ -257,6 +258,9 @@ namespace WindowsGame1
             DirectoryInfo info = System.IO.Directory.GetParent(path);
 
             buildDirectory = info.FullName;
+
+            buildDirectory += "\\Build";
+
 
             // Create our temporary directory.
             Directory.CreateDirectory(buildDirectory);

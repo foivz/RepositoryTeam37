@@ -32,10 +32,8 @@ namespace Forma
         //"Message pump" objekta u paraleli na istom threadu. 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'baza1DataSet._3D_objekt' table. You can move, or remove it, as needed.
-            //this._3D_objektTableAdapter.Fill(this.baza1DataSet._3D_objekt);
 
-            //Moramo znati gdje nam je lokalni filesystem odma u startu.
+            //Moramo znati gdje nam je lokalni filesystem odmah u startu.
             ControlData.DajPutDoBinary();
             Manipulator.contentBuilder = new ContentBuilder();
 
@@ -50,8 +48,17 @@ namespace Forma
 
             RemakeWindow();
 
+            
+
             toolStripStatusLabel1.Text = "Spreman";
             toolStripStatusLabel2.Text = "";
+
+            this.TopMost = false;
+            
+        }
+
+        private void MainForm_Shown(object sender, EventArgs e)
+        {
             
         }
 
@@ -180,5 +187,13 @@ namespace Forma
             Manipulator.DoSelectTex(e.Node.Index);
           
         }
+
+        private void fullscreenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            game1.raiseFullscreen = true;
+
+        }
+
+        
    }
 }

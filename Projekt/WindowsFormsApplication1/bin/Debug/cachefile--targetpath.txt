@@ -1,4 +1,0 @@
-content\Model.xnb
-content\tex0.xnb
-content\tex1.xnb
-content\FBX\7E627D4\fotelj.fbm\foteljaUV_0.xnb
