@@ -35,6 +35,7 @@ namespace Forma
 
             //Moramo znati gdje nam je lokalni filesystem odmah u startu.
             ControlData.DajPutDoBinary();
+            ControlData.DajPutDoBaze();
             Manipulator.contentBuilder = new ContentBuilder();
 
             Thread game = new Thread(() =>
@@ -48,7 +49,7 @@ namespace Forma
 
             RemakeWindow();
 
-            
+            _3D_objektTableAdapter.Connection.ConnectionString = "Data Source=(LocalDB)\\v11.0;AttachDbFilename=" + ControlData.PathToMDF +";Integrated Security=True;Connect Timeout=30";
 
             toolStripStatusLabel1.Text = "Spreman";
             toolStripStatusLabel2.Text = "";

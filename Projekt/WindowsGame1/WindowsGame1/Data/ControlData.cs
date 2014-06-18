@@ -19,6 +19,7 @@ namespace WindowsGame1
         /// Put do offline Binary foldera u kojem se nalaze naši resursi
         /// </summary>
         public static string PathToBinary = "";
+        public static string PathToMDF = "";
 
 
         /// <summary>
@@ -38,6 +39,20 @@ namespace WindowsGame1
 
             path = info.FullName;
             PathToBinary = path + "\\Binary\\";
+        }
+
+        public static void DajPutDoBaze()
+        {
+            string path = Application.ExecutablePath;
+            DirectoryInfo info = System.IO.Directory.GetParent(path);
+
+            for ( int i = 0; i < 4; i++ )
+            {
+                info = info.Parent;
+            }
+
+            path = info.FullName;
+            PathToMDF = path + "\\Baza\\Baza1.mdf";
         }
         
 

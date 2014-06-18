@@ -26,9 +26,8 @@ namespace WindowsFormsApplication1.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\v11.0;AttachDbFilename=C:\\Users\\Eudaimonium\\Documents\\GitHu" +
-            "b\\RepositoryTeam37\\Dokumentacija\\Baza1.mdf;Integrated Security=True;Connect Time" +
-            "out=30")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\v11.0;AttachDbFilename=..\\..\\..\\Dokumentacija\\Baza1.mdf;Int" +
+            "egrated Security=True;Connect Timeout=30")]
         public string Baza1ConnectionString {
             get {
                 return ((string)(this["Baza1ConnectionString"]));
