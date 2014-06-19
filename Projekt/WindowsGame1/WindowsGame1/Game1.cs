@@ -137,6 +137,8 @@ namespace WindowsGame1
                     gWindow.DesktopLocation = location;
                     gWindow.Width = ControlData.Width;
                     gWindow.Height = ControlData.Height;
+                    gWindow.TopMost = true;
+                    gWindow.TopLevel = true;        
                 }
             }
             else

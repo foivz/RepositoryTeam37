@@ -12,6 +12,7 @@ using System.IO;
 using Microsoft.Xna.Framework;
 using WindowsGame1;
 using WindowsGame1.Data;
+using WindowsFormsApplication1;
 
 namespace Forma
 {
@@ -25,6 +26,7 @@ namespace Forma
         //Pravimo novu referencu na naš XNA Game projekt, pomoću ove reference
         //kasnije možemo mjenjati parametre našeg 3D rendera 
         public Game1 game1;
+        public Thread game;
        
         //Event za pokretanje Forme - odmah pokrećemo novi thread koji sadrži 
         //XNA Game program. Ovo moramo raditi na novom threadu preko lambde,
@@ -36,23 +38,26 @@ namespace Forma
             //Moramo znati gdje nam je lokalni filesystem odmah u startu.
             ControlData.DajPutDoBinary();
             ControlData.DajPutDoBaze();
+
             Manipulator.contentBuilder = new ContentBuilder();
 
-            Thread game = new Thread(() =>
+            game = new Thread(() =>
 
             {
                 game1 = new Game1();
                 game1.Run();
             });
 
-            game.Start();
-
-            RemakeWindow();
+           
 
             _3D_objektTableAdapter.Connection.ConnectionString = "Data Source=(LocalDB)\\v11.0;AttachDbFilename=" + ControlData.PathToMDF +";Integrated Security=True;Connect Timeout=30";
 
-            toolStripStatusLabel1.Text = "Spreman";
-            toolStripStatusLabel2.Text = "";
+
+            toolStripStatusLabel1.Text = "Spreman.";
+            toolStripStatusLabel2.Text = "Molim, loginajte se pomoću vaših korisničkih podataka.";
+
+            menuStrip1.Items[0].Enabled = false;
+            menuStrip1.Items[1].Enabled = false;
 
             this.TopMost = false;
             
@@ -60,7 +65,7 @@ namespace Forma
 
         private void MainForm_Shown(object sender, EventArgs e)
         {
-            
+            RemakeWindow();
         }
 
         //Ova funkcija se zove iz Forme svaki puta kada je potrebno promjeniti 3D render 
@@ -113,6 +118,7 @@ namespace Forma
         //Popuni DGW: Namjestaj
         private void namjestajToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            
             toolStripStatusLabel1.Text = "Dohvaćam popis iz baze...";
             toolStripStatusLabel1.Invalidate();
             this._3D_objektTableAdapter.FillByCategory(this.baza1DataSet._3D_objekt, 2);
@@ -193,6 +199,31 @@ namespace Forma
         {
             game1.raiseFullscreen = true;
 
+        }
+
+        private void logInToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LoginForm logForma = new LoginForm();
+
+            menuStrip1.Items[0].Enabled = false;
+            menuStrip1.Items[1].Enabled = false;
+
+            if ( logForma.ShowDialog() == System.Windows.Forms.DialogResult.OK )
+            {
+                menuStrip1.Items[0].Enabled = true;
+
+                if ( ControlData.tipKorisnika != "Korisnik" )
+                {
+                    menuStrip1.Items[1].Enabled = true;
+
+                    game.Start();
+
+                    RemakeWindow();
+                }
+
+                toolStripStatusLabel1.Text = "Dobrodošao, " + ControlData.tipKorisnika + " " + ControlData.Username +".";
+                toolStripStatusLabel2.Text = "";
+            }
         }
 
         

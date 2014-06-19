@@ -12,6 +12,8 @@ namespace WindowsGame1
     {
         public static int X = 0, Y = 0, Width = 0, Height = 0;
        
+        //Korisnicki podaci:
+        public static string Username, tipKorisnika;
 
         public static bool LOADING = false;
 

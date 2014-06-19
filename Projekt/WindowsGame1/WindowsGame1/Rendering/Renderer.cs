@@ -32,7 +32,7 @@ namespace WindowsGame1
         public static void ReLoad()
         {
             view = Matrix.CreateLookAt(Camera, Vector3.Zero, Vector3.Up);
-            projection = Matrix.CreatePerspectiveFieldOfView(1, ControlData.Width / ControlData.Height, 1f, 1000f);
+            projection = Matrix.CreatePerspectiveFieldOfView(1, ControlData.Width / ControlData.Height, 1f, 5000f);
 
             if (shader != null)
             {

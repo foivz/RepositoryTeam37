@@ -32,14 +32,6 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kategorijaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.modelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nazivDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.opisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.korisnikidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dobjektBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.baza1DataSet = new WindowsFormsApplication1.Baza1DataSet();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -53,22 +45,30 @@
             this.ostaloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.uploadNaBazuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logInToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.teksturaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this._3D_objektTableAdapter = new WindowsFormsApplication1.Baza1DataSetTableAdapters._3D_objektTableAdapter();
+            this.opcijeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fullscreenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.opcijeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.fullscreenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.teksturaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kategorijaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.modelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nazivDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.opisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.korisnikidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dobjektBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.baza1DataSet = new WindowsFormsApplication1.Baza1DataSet();
+            this._3D_objektTableAdapter = new WindowsFormsApplication1.Baza1DataSetTableAdapters._3D_objektTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.teksturaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dobjektBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.baza1DataSet)).BeginInit();
-            this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.teksturaBindingSource)).BeginInit();
-            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -126,63 +126,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(353, 117);
             this.dataGridView1.TabIndex = 7;
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // kategorijaDataGridViewTextBoxColumn
-            // 
-            this.kategorijaDataGridViewTextBoxColumn.DataPropertyName = "kategorija";
-            this.kategorijaDataGridViewTextBoxColumn.HeaderText = "kategorija";
-            this.kategorijaDataGridViewTextBoxColumn.Name = "kategorijaDataGridViewTextBoxColumn";
-            this.kategorijaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.kategorijaDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // modelDataGridViewTextBoxColumn
-            // 
-            this.modelDataGridViewTextBoxColumn.DataPropertyName = "model";
-            this.modelDataGridViewTextBoxColumn.HeaderText = "model";
-            this.modelDataGridViewTextBoxColumn.Name = "modelDataGridViewTextBoxColumn";
-            this.modelDataGridViewTextBoxColumn.ReadOnly = true;
-            this.modelDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // nazivDataGridViewTextBoxColumn
-            // 
-            this.nazivDataGridViewTextBoxColumn.DataPropertyName = "naziv";
-            this.nazivDataGridViewTextBoxColumn.HeaderText = "Naziv";
-            this.nazivDataGridViewTextBoxColumn.Name = "nazivDataGridViewTextBoxColumn";
-            this.nazivDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // opisDataGridViewTextBoxColumn
-            // 
-            this.opisDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.opisDataGridViewTextBoxColumn.DataPropertyName = "opis";
-            this.opisDataGridViewTextBoxColumn.HeaderText = "Opis";
-            this.opisDataGridViewTextBoxColumn.Name = "opisDataGridViewTextBoxColumn";
-            this.opisDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // korisnikidDataGridViewTextBoxColumn
-            // 
-            this.korisnikidDataGridViewTextBoxColumn.DataPropertyName = "korisnikid";
-            this.korisnikidDataGridViewTextBoxColumn.HeaderText = "korisnikid";
-            this.korisnikidDataGridViewTextBoxColumn.Name = "korisnikidDataGridViewTextBoxColumn";
-            this.korisnikidDataGridViewTextBoxColumn.ReadOnly = true;
-            this.korisnikidDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // dobjektBindingSource
-            // 
-            this.dobjektBindingSource.DataMember = "3D_objekt";
-            this.dobjektBindingSource.DataSource = this.baza1DataSet;
-            // 
-            // baza1DataSet
-            // 
-            this.baza1DataSet.DataSetName = "Baza1DataSet";
-            this.baza1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label3
             // 
@@ -296,10 +239,22 @@
             this.logInToolStripMenuItem.Name = "logInToolStripMenuItem";
             this.logInToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.logInToolStripMenuItem.Text = "Log in";
+            this.logInToolStripMenuItem.Click += new System.EventHandler(this.logInToolStripMenuItem_Click);
             // 
-            // _3D_objektTableAdapter
+            // opcijeToolStripMenuItem
             // 
-            this._3D_objektTableAdapter.ClearBeforeFill = true;
+            this.opcijeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fullscreenToolStripMenuItem});
+            this.opcijeToolStripMenuItem.Name = "opcijeToolStripMenuItem";
+            this.opcijeToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.opcijeToolStripMenuItem.Text = "Opcije";
+            // 
+            // fullscreenToolStripMenuItem
+            // 
+            this.fullscreenToolStripMenuItem.Name = "fullscreenToolStripMenuItem";
+            this.fullscreenToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.fullscreenToolStripMenuItem.Text = "Fullscreen";
+            this.fullscreenToolStripMenuItem.Click += new System.EventHandler(this.fullscreenToolStripMenuItem_Click);
             // 
             // statusStrip1
             // 
@@ -324,20 +279,66 @@
             this.toolStripStatusLabel2.Size = new System.Drawing.Size(118, 17);
             this.toolStripStatusLabel2.Text = "toolStripStatusLabel2";
             // 
-            // opcijeToolStripMenuItem
+            // idDataGridViewTextBoxColumn
             // 
-            this.opcijeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fullscreenToolStripMenuItem});
-            this.opcijeToolStripMenuItem.Name = "opcijeToolStripMenuItem";
-            this.opcijeToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
-            this.opcijeToolStripMenuItem.Text = "Opcije";
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Visible = false;
             // 
-            // fullscreenToolStripMenuItem
+            // kategorijaDataGridViewTextBoxColumn
             // 
-            this.fullscreenToolStripMenuItem.Name = "fullscreenToolStripMenuItem";
-            this.fullscreenToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.fullscreenToolStripMenuItem.Text = "Fullscreen";
-            this.fullscreenToolStripMenuItem.Click += new System.EventHandler(this.fullscreenToolStripMenuItem_Click);
+            this.kategorijaDataGridViewTextBoxColumn.DataPropertyName = "kategorija";
+            this.kategorijaDataGridViewTextBoxColumn.HeaderText = "kategorija";
+            this.kategorijaDataGridViewTextBoxColumn.Name = "kategorijaDataGridViewTextBoxColumn";
+            this.kategorijaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.kategorijaDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // modelDataGridViewTextBoxColumn
+            // 
+            this.modelDataGridViewTextBoxColumn.DataPropertyName = "model";
+            this.modelDataGridViewTextBoxColumn.HeaderText = "model";
+            this.modelDataGridViewTextBoxColumn.Name = "modelDataGridViewTextBoxColumn";
+            this.modelDataGridViewTextBoxColumn.ReadOnly = true;
+            this.modelDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // nazivDataGridViewTextBoxColumn
+            // 
+            this.nazivDataGridViewTextBoxColumn.DataPropertyName = "naziv";
+            this.nazivDataGridViewTextBoxColumn.HeaderText = "Naziv";
+            this.nazivDataGridViewTextBoxColumn.Name = "nazivDataGridViewTextBoxColumn";
+            this.nazivDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // opisDataGridViewTextBoxColumn
+            // 
+            this.opisDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.opisDataGridViewTextBoxColumn.DataPropertyName = "opis";
+            this.opisDataGridViewTextBoxColumn.HeaderText = "Opis";
+            this.opisDataGridViewTextBoxColumn.Name = "opisDataGridViewTextBoxColumn";
+            this.opisDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // korisnikidDataGridViewTextBoxColumn
+            // 
+            this.korisnikidDataGridViewTextBoxColumn.DataPropertyName = "korisnikid";
+            this.korisnikidDataGridViewTextBoxColumn.HeaderText = "korisnikid";
+            this.korisnikidDataGridViewTextBoxColumn.Name = "korisnikidDataGridViewTextBoxColumn";
+            this.korisnikidDataGridViewTextBoxColumn.ReadOnly = true;
+            this.korisnikidDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // dobjektBindingSource
+            // 
+            this.dobjektBindingSource.DataMember = "3D_objekt";
+            this.dobjektBindingSource.DataSource = this.baza1DataSet;
+            // 
+            // baza1DataSet
+            // 
+            this.baza1DataSet.DataSetName = "Baza1DataSet";
+            this.baza1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // _3D_objektTableAdapter
+            // 
+            this._3D_objektTableAdapter.ClearBeforeFill = true;
             // 
             // MainForm
             // 
@@ -362,13 +363,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dobjektBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.baza1DataSet)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.teksturaBindingSource)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.teksturaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dobjektBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.baza1DataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

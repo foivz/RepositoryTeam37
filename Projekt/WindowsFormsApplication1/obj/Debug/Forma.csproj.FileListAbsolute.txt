@@ -19,3 +19,4 @@ C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsFormsAppli
 C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsFormsApplication1\bin\Debug\Baza_3D_render.pdb
 C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsFormsApplication1\obj\Debug\Baza_3D_Modela_GUI.exe
 C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsFormsApplication1\obj\Debug\Baza_3D_Modela_GUI.pdb
+C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.LoginForm.resources
