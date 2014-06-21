@@ -55,17 +55,27 @@ namespace WindowsGame1
                     Renderer.CameraReload();
                 }
 
+                if ( Mouse.GetState().LeftButton == ButtonState.Pressed )
+                {
+                    Renderer.worldRotated *= Matrix.CreateTranslation(new Vector3(0, -actY, 0));
+                   // Renderer.CameraTarget = Vector3.Transform(Renderer.CameraTarget, Matrix.CreateTranslation(new Vector3(0, -actY, 0)));
+
+                    Renderer.CameraReload();
+                }
+
                 //Sa scroll zoomiraj
                 if ( actualScroll != ScrollValue )
                 {
                     if ( actualScroll < ScrollValue )
                     {
-                        Renderer.Camera *= new Vector3(1.2f);
+                        Renderer.worldRotated *= Matrix.CreateScale(1.1f);
+                        //Renderer.Camera *= new Vector3(1.2f);
                         Renderer.CameraReload();
                     }
                     if ( actualScroll > ScrollValue )
                     {
-                        Renderer.Camera *= new Vector3(0.8f);
+                        Renderer.worldRotated *= Matrix.CreateScale(0.9f);
+                        //Renderer.Camera *= new Vector3(0.8f);
                         Renderer.CameraReload();
                     }
                 }

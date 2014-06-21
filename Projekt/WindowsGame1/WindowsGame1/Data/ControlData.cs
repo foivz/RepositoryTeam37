@@ -23,6 +23,8 @@ namespace WindowsGame1
         public static string PathToBinary = "";
         public static string PathToMDF = "";
 
+        public static string PathToDownloadable = "";
+
 
         /// <summary>
         /// Formira apsolutni path string do Binary foldera.

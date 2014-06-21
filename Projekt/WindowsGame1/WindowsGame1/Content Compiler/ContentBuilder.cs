@@ -154,11 +154,9 @@ namespace WindowsGame1
             projectRootElement = ProjectRootElement.Create(projectPath);
 
             // Include the standard targets file that defines how to build XNA Framework content.
-            projectRootElement.AddImport("$(MSBuildExtensionsPath)\\Microsoft\\XNA Game Studio\\" +
-                                         "v4.0\\Microsoft.Xna.GameStudio.ContentPipeline.targets");
-          
+            projectRootElement.AddImport(Application.StartupPath + "\\Microsoft.Xna.GameStudio.ContentPipeline.targets");
+
             buildProject = new Project(projectRootElement);
-            
 
             buildProject.SetProperty("XnaPlatform", "Windows");
             buildProject.SetProperty("XnaProfile", "Reach");

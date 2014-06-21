@@ -51,16 +51,22 @@ namespace Forma
            
 
             _3D_objektTableAdapter.Connection.ConnectionString = "Data Source=(LocalDB)\\v11.0;AttachDbFilename=" + ControlData.PathToMDF +";Integrated Security=True;Connect Timeout=30";
-
+            korisnikTableAdapter1.Connection.ConnectionString = "Data Source=(LocalDB)\\v11.0;AttachDbFilename=" + ControlData.PathToMDF + ";Integrated Security=True;Connect Timeout=30";
 
             toolStripStatusLabel1.Text = "Spreman.";
             toolStripStatusLabel2.Text = "Molim, loginajte se pomoću vaših korisničkih podataka.";
 
             menuStrip1.Items[0].Enabled = false;
             menuStrip1.Items[1].Enabled = false;
+            menuStrip1.Items[3].Enabled = false;
+            downloadToolStripMenuItem.Enabled = false;
 
             this.TopMost = false;
-            
+        }
+
+        void MainForm_GotFocus(object sender, EventArgs e)
+        {
+          
         }
 
         private void MainForm_Shown(object sender, EventArgs e)
@@ -92,11 +98,13 @@ namespace Forma
         //koji mu kažu da li treba biti vidljiv, i da li treba prekinuti izvođenje.
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
+            if (game1 != null)
             game1.needsToExit = true;
         }
 
         private void MainForm_Leave(object sender, EventArgs e)
         {
+            if ( game1 != null )
             game1.needsToMinimize = true;
         }
 
@@ -186,6 +194,11 @@ namespace Forma
                 }
                 toolStripStatusLabel1.Text = "Gotovo!";
                 toolStripStatusLabel2.Text = "Dohvaćeno " + treeView1.Nodes.Count + " tekstura za " + (string)dataGridView1.SelectedCells[2].Value;
+
+                DataTable autorResult = korisnikTableAdapter1.GetKorisnikByID((int)dataGridView1.SelectedCells[5].Value);
+                txtAutor.Text = "Autor: " + (string)autorResult.Rows[0][1];
+
+                downloadToolStripMenuItem.Enabled =  true;
             }
         }
 
@@ -207,10 +220,13 @@ namespace Forma
 
             menuStrip1.Items[0].Enabled = false;
             menuStrip1.Items[1].Enabled = false;
+            downloadToolStripMenuItem.Enabled = false;
 
             if ( logForma.ShowDialog() == System.Windows.Forms.DialogResult.OK )
             {
                 menuStrip1.Items[0].Enabled = true;
+                menuStrip1.Items[3].Enabled = true;
+                
 
                 if ( ControlData.tipKorisnika != "Korisnik" )
                 {
@@ -224,6 +240,15 @@ namespace Forma
                 toolStripStatusLabel1.Text = "Dobrodošao, " + ControlData.tipKorisnika + " " + ControlData.Username +".";
                 toolStripStatusLabel2.Text = "";
             }
+        }
+
+        private void downloadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            game1.needsToMinimize = true;
+            DownloadForm form = new DownloadForm();
+            form.ShowDialog();
+            game1.needsToMinimize = false;
+
         }
 
         

@@ -101,6 +101,7 @@ namespace WindowsGame1
             ModelDataBase.LoadIntoRenderer(0);
 
             Renderer.cursor = Content.Load<Texture2D>("Textures/Cursor");
+            Renderer.font = Content.Load<SpriteFont>("Fonts/FullscreenFont");
 
             GraphicsDevice.DepthStencilState = stencilState;
             graphics.ApplyChanges();

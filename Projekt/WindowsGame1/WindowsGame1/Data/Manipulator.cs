@@ -48,6 +48,7 @@ namespace WindowsGame1.Data
         {
             //Popisi puteva
             string apsolutePath = ControlData.PathToBinary + category[categoryID - 1] + folderName;
+            ControlData.PathToDownloadable = apsolutePath;
             string[] contents = System.IO.Directory.GetFiles(apsolutePath);
 
             meshPath = "";
@@ -103,12 +104,13 @@ namespace WindowsGame1.Data
             if ( string.IsNullOrEmpty(error) )
             {
                 //Pošto koristimo jedan statični mesh u Rendereru, moramo prvo Unloadati sve.
-                //Srećom imamo samo jedan mesh, jedan shader i jednu teksturu za reloadati.
+                
                 Game1.content.Unload();
 
                 Renderer.mesh = Game1.content.Load<Model>("..\\build\\content\\Model");
                 Renderer.shader = Game1.content.Load<Effect>("Shaders\\GenericShader");
                 Renderer.cursor = Game1.content.Load<Texture2D>("Textures/Cursor");
+                Renderer.font = Game1.content.Load<SpriteFont>("Fonts/FullscreenFont");
                 
                 Texture2D tex = Game1.content.Load<Texture2D>("..\\build\\content\\tex0");
                 Renderer.shader.Parameters["tex0"].SetValue(tex);

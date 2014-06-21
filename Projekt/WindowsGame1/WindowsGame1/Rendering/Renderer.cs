@@ -24,15 +24,17 @@ namespace WindowsGame1
         public static Matrix worldRotated = Matrix.CreateRotationX(MathHelper.ToRadians(-90)) * Matrix.CreateTranslation(new Vector3(0f, -10f, 0f));
 
         public static Vector3 Camera = new Vector3(100, 50, 100);
+        public static Vector3 CameraTarget = Vector3.Zero;
 
         public static Model mesh;
         public static Effect shader;
         public static Texture2D cursor;
+        public static SpriteFont font;
 
         public static void ReLoad()
         {
-            view = Matrix.CreateLookAt(Camera, Vector3.Zero, Vector3.Up);
-            projection = Matrix.CreatePerspectiveFieldOfView(1, ControlData.Width / ControlData.Height, 1f, 5000f);
+            view = Matrix.CreateLookAt(Camera, CameraTarget, Vector3.Up);
+            projection = Matrix.CreatePerspectiveFieldOfView(MathHelper.ToRadians(65), ControlData.Width / ControlData.Height, 1f, 5000f);
 
             if (shader != null)
             {
@@ -59,7 +61,7 @@ namespace WindowsGame1
 
         public static void CameraReload()
         {
-            view = Matrix.CreateLookAt(Camera, Vector3.Zero, Vector3.Up);
+            view = Matrix.CreateLookAt(Camera, CameraTarget, Vector3.Up);
             projection = Matrix.CreatePerspectiveFieldOfView(1, ControlData.Width / ControlData.Height, 1f, 1000f);
 
             if ( shader != null )
@@ -85,7 +87,7 @@ namespace WindowsGame1
             if ( !ControlData.LOADING )
             {
 
-                view = Matrix.CreateLookAt(Camera, Vector3.Zero, Vector3.Up);
+                view = Matrix.CreateLookAt(Camera, CameraTarget, Vector3.Up);
                 projection = Matrix.CreatePerspectiveFieldOfView(1, ControlData.Width / ControlData.Height, 1f, 1000f);
 
                 shader.Parameters["World"].SetValue(worldRotated);
@@ -112,6 +114,11 @@ namespace WindowsGame1
             {
                 Game1.spriteBatch.Draw(cursor, new Vector2((float)Input.X, (float)Input.Y), null, Color.White, 0f,
                     new Vector2(cursor.Width / 2, cursor.Height / 2), 1f, SpriteEffects.None, 0f);
+
+                Game1.spriteBatch.DrawString(font, "Lijevi klik: pomicanje modela gore-dolje", new Vector2(5, 5), Color.LightGoldenrodYellow);
+                Game1.spriteBatch.DrawString(font, "Scroll: zoomiranje", new Vector2(5, 20), Color.LightGoldenrodYellow);
+                Game1.spriteBatch.DrawString(font, "Desni klik: Rotiranje modela", new Vector2(5, 35), Color.LightGoldenrodYellow);
+                Game1.spriteBatch.DrawString(font, "ESCAPE: izlaz", new Vector2(5, 60), Color.LightGoldenrodYellow);
 
             }
             Game1.spriteBatch.End();
