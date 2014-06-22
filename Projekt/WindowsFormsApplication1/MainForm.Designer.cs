@@ -53,6 +53,8 @@
             this.ostaloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.uploadNaBazuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logInToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logInToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.kreirajteAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.opcijeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fullscreenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.downloadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -63,6 +65,7 @@
             this.teksturaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this._3D_objektTableAdapter = new WindowsFormsApplication1.Baza1DataSetTableAdapters._3D_objektTableAdapter();
             this.korisnikTableAdapter1 = new WindowsFormsApplication1.Baza1DataSetTableAdapters.korisnikTableAdapter();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -83,6 +86,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.listBox1);
             this.splitContainer1.Panel1.Controls.Add(this.treeView1);
             this.splitContainer1.Panel1.Controls.Add(this.dataGridView1);
             this.splitContainer1.Panel1.Controls.Add(this.label3);
@@ -93,7 +97,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.txtAutor);
-            this.splitContainer1.Size = new System.Drawing.Size(761, 398);
+            this.splitContainer1.Size = new System.Drawing.Size(761, 415);
             this.splitContainer1.SplitterDistance = 383;
             this.splitContainer1.TabIndex = 0;
             // 
@@ -102,10 +106,10 @@
             this.treeView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.treeView1.HideSelection = false;
-            this.treeView1.ItemHeight = 60;
-            this.treeView1.Location = new System.Drawing.Point(16, 193);
+            this.treeView1.ItemHeight = 55;
+            this.treeView1.Location = new System.Drawing.Point(16, 210);
             this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(353, 133);
+            this.treeView1.Size = new System.Drawing.Size(353, 119);
             this.treeView1.TabIndex = 8;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
             // 
@@ -131,7 +135,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(353, 117);
+            this.dataGridView1.Size = new System.Drawing.Size(353, 134);
             this.dataGridView1.TabIndex = 7;
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
@@ -197,7 +201,7 @@
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 345);
+            this.label3.Location = new System.Drawing.Point(13, 332);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(43, 13);
             this.label3.TabIndex = 6;
@@ -208,7 +212,7 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 177);
+            this.label2.Location = new System.Drawing.Point(13, 194);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(43, 13);
             this.label2.TabIndex = 5;
@@ -301,10 +305,27 @@
             // 
             // logInToolStripMenuItem
             // 
+            this.logInToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.logInToolStripMenuItem1,
+            this.kreirajteAccountToolStripMenuItem});
             this.logInToolStripMenuItem.Name = "logInToolStripMenuItem";
             this.logInToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.logInToolStripMenuItem.Text = "Log in";
             this.logInToolStripMenuItem.Click += new System.EventHandler(this.logInToolStripMenuItem_Click);
+            // 
+            // logInToolStripMenuItem1
+            // 
+            this.logInToolStripMenuItem1.Name = "logInToolStripMenuItem1";
+            this.logInToolStripMenuItem1.Size = new System.Drawing.Size(163, 22);
+            this.logInToolStripMenuItem1.Text = "Log in";
+            this.logInToolStripMenuItem1.Click += new System.EventHandler(this.logInToolStripMenuItem1_Click);
+            // 
+            // kreirajteAccountToolStripMenuItem
+            // 
+            this.kreirajteAccountToolStripMenuItem.Name = "kreirajteAccountToolStripMenuItem";
+            this.kreirajteAccountToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.kreirajteAccountToolStripMenuItem.Text = "Kreirajte account";
+            this.kreirajteAccountToolStripMenuItem.Click += new System.EventHandler(this.kreirajteAccountToolStripMenuItem_Click);
             // 
             // opcijeToolStripMenuItem
             // 
@@ -318,7 +339,7 @@
             // fullscreenToolStripMenuItem
             // 
             this.fullscreenToolStripMenuItem.Name = "fullscreenToolStripMenuItem";
-            this.fullscreenToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.fullscreenToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.fullscreenToolStripMenuItem.Text = "Fullscreen";
             this.fullscreenToolStripMenuItem.Click += new System.EventHandler(this.fullscreenToolStripMenuItem_Click);
             // 
@@ -326,7 +347,7 @@
             // 
             this.downloadToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.downloadToolStripMenuItem.Name = "downloadToolStripMenuItem";
-            this.downloadToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.downloadToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.downloadToolStripMenuItem.Text = "Download";
             this.downloadToolStripMenuItem.Click += new System.EventHandler(this.downloadToolStripMenuItem_Click);
             // 
@@ -334,7 +355,7 @@
             // 
             this.txtAutor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtAutor.Location = new System.Drawing.Point(3, 353);
+            this.txtAutor.Location = new System.Drawing.Point(3, 370);
             this.txtAutor.Name = "txtAutor";
             this.txtAutor.Size = new System.Drawing.Size(359, 20);
             this.txtAutor.TabIndex = 0;
@@ -344,7 +365,7 @@
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
             this.toolStripStatusLabel2});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 376);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 393);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(761, 22);
             this.statusStrip1.TabIndex = 1;
@@ -370,11 +391,22 @@
             // 
             this.korisnikTableAdapter1.ClearBeforeFill = true;
             // 
+            // listBox1
+            // 
+            this.listBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(62, 332);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(307, 56);
+            this.listBox1.TabIndex = 9;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(761, 398);
+            this.ClientSize = new System.Drawing.Size(761, 415);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.splitContainer1);
             this.MainMenuStrip = this.menuStrip1;
@@ -449,5 +481,8 @@
         private System.Windows.Forms.TextBox txtAutor;
         private WindowsFormsApplication1.Baza1DataSetTableAdapters.korisnikTableAdapter korisnikTableAdapter1;
         public System.Windows.Forms.ToolStripMenuItem downloadToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem logInToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem kreirajteAccountToolStripMenuItem;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }

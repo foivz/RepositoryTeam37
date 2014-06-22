@@ -3,3 +3,4 @@ Content\Models\cubeUV.xnb
 Content\Textures\avatar.xnb
 Content\Textures\Cursor.xnb
 Content\Fonts\FullscreenFont.xnb
+Content\Shaders\TransparentShader.xnb

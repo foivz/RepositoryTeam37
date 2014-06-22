@@ -87,10 +87,8 @@
   <ItemGroup>
     <Compile Include="Content Compiler\ContentBuilder.cs" />
     <Compile Include="Data\ControlData.cs" />
-    <Compile Include="Data\Korisnik.cs" />
     <Compile Include="Data\Manipulator.cs" />
     <Compile Include="Data\ModelDataBase.cs" />
-    <Compile Include="Data\Objekt3D.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Game1.cs" />

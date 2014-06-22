@@ -68,13 +68,13 @@ namespace WindowsGame1
                 {
                     if ( actualScroll < ScrollValue )
                     {
-                        Renderer.worldRotated *= Matrix.CreateScale(1.1f);
+                        Renderer.worldRotated *= Matrix.CreateScale(0.9f);
                         //Renderer.Camera *= new Vector3(1.2f);
                         Renderer.CameraReload();
                     }
                     if ( actualScroll > ScrollValue )
                     {
-                        Renderer.worldRotated *= Matrix.CreateScale(0.9f);
+                        Renderer.worldRotated *= Matrix.CreateScale(1.1f);
                         //Renderer.Camera *= new Vector3(0.8f);
                         Renderer.CameraReload();
                     }

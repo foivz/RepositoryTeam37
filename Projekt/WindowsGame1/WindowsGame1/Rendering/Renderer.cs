@@ -28,6 +28,7 @@ namespace WindowsGame1
 
         public static Model mesh;
         public static Effect shader;
+        public static Effect transparentShader;
         public static Texture2D cursor;
         public static SpriteFont font;
 
@@ -41,8 +42,9 @@ namespace WindowsGame1
                 shader.Parameters["World"].SetValue(worldRotated);
                 shader.Parameters["Projection"].SetValue(projection);
                 shader.Parameters["View"].SetValue(view);
-                shader.CurrentTechnique = shader.Techniques[0];
 
+                shader.CurrentTechnique = shader.Techniques[0];
+               
                 if ( mesh != null )
                 {
                     for ( int i = 0; i < mesh.Meshes.Count; i++ )
@@ -57,6 +59,64 @@ namespace WindowsGame1
                 }
             }
 
+            if ( transparentShader != null )
+            {
+                transparentShader.Parameters["World"].SetValue(worldRotated);
+                transparentShader.Parameters["Projection"].SetValue(projection);
+                transparentShader.Parameters["View"].SetValue(view);
+
+                transparentShader.CurrentTechnique = transparentShader.Techniques[0];
+
+            }
+
+        }
+
+        public static void UseShaderDiffuse()
+        {
+            if ( mesh != null )
+            {
+                for ( int i = 0; i < mesh.Meshes.Count; i++ )
+                {
+                    for ( int x = 0; x < mesh.Meshes[i].MeshParts.Count; x++ )
+                    {
+                        mesh.Meshes[i].MeshParts[x].Effect = shader;
+                    }
+                }
+
+
+            }
+        }
+
+        public static void UseShaderTransparent()
+        {
+            if ( mesh != null )
+            {
+                for ( int i = 0; i < mesh.Meshes.Count; i++ )
+                {
+                    for ( int x = 0; x < mesh.Meshes[i].MeshParts.Count; x++ )
+                    {
+                        mesh.Meshes[i].MeshParts[x].Effect = transparentShader;
+                    }
+                }
+
+
+            }
+        }
+
+        public static void ReloadResources()
+        {
+            //Ovo nam teba dok loadamo noev modele i teksture, prije toga 
+            //korisimo Content.Unload() da počistimo bilo kakve zaostatke.
+            Renderer.mesh = Game1.content.Load<Model>("..\\build\\content\\Model");
+            Renderer.shader = Game1.content.Load<Effect>("Shaders\\GenericShader");
+            Renderer.transparentShader = Game1.content.Load<Effect>("Shaders/TransparentShader");
+            Renderer.cursor = Game1.content.Load<Texture2D>("Textures/Cursor");
+            Renderer.font = Game1.content.Load<SpriteFont>("Fonts/FullscreenFont");
+
+            Texture2D tex = Game1.content.Load<Texture2D>("..\\build\\content\\tex0");
+            Renderer.shader.Parameters["tex0"].SetValue(tex);
+            Renderer.transparentShader.Parameters["tex0"].SetValue(tex);
+            Renderer.transparentShader.Parameters["transparency"].SetValue(0.5f);
         }
 
         public static void CameraReload()
@@ -69,7 +129,18 @@ namespace WindowsGame1
                 shader.Parameters["World"].SetValue(worldRotated);
                 shader.Parameters["Projection"].SetValue(projection);
                 shader.Parameters["View"].SetValue(view);
+
+
                 shader.CurrentTechnique = shader.Techniques[0];
+            }
+
+            if ( transparentShader != null )
+            {
+                transparentShader.Parameters["World"].SetValue(worldRotated);
+                transparentShader.Parameters["Projection"].SetValue(projection);
+                transparentShader.Parameters["View"].SetValue(view);
+
+                transparentShader.CurrentTechnique = transparentShader.Techniques[0];
             }
         }
 
@@ -90,9 +161,19 @@ namespace WindowsGame1
                 view = Matrix.CreateLookAt(Camera, CameraTarget, Vector3.Up);
                 projection = Matrix.CreatePerspectiveFieldOfView(1, ControlData.Width / ControlData.Height, 1f, 1000f);
 
-                shader.Parameters["World"].SetValue(worldRotated);
-                shader.Parameters["Projection"].SetValue(projection);
-                shader.Parameters["View"].SetValue(view);
+                if ( shader != null )
+                {
+                    shader.Parameters["World"].SetValue(worldRotated);
+                    shader.Parameters["Projection"].SetValue(projection);
+                    shader.Parameters["View"].SetValue(view);
+                }
+
+                if ( transparentShader != null )
+                {
+                    transparentShader.Parameters["World"].SetValue(worldRotated);
+                    transparentShader.Parameters["Projection"].SetValue(projection);
+                    transparentShader.Parameters["View"].SetValue(view);
+                }
 
             }
         }
@@ -101,8 +182,6 @@ namespace WindowsGame1
         {
             if ( !ControlData.LOADING )
             {
-                shader.CurrentTechnique.Passes[0].Apply();
-
                 for ( int i = 0; i < mesh.Meshes.Count; i++ )
                 {
                     mesh.Meshes[i].Draw();

@@ -35,9 +35,13 @@ namespace Forma
         private void MainForm_Load(object sender, EventArgs e)
         {
 
-            //Moramo znati gdje nam je lokalni filesystem odmah u startu.
             ControlData.DajPutDoBinary();
             ControlData.DajPutDoBaze();
+
+            ControlData.ConnectionString = "Data Source=(LocalDB)\\v11.0;AttachDbFilename=" + ControlData.PathToMDF + ";Integrated Security=True;Connect Timeout=30"; 
+
+            //Moramo znati gdje nam je lokalni filesystem odmah u startu.
+            
 
             Manipulator.contentBuilder = new ContentBuilder();
 
@@ -48,13 +52,14 @@ namespace Forma
                 game1.Run();
             });
 
-           
 
-            _3D_objektTableAdapter.Connection.ConnectionString = "Data Source=(LocalDB)\\v11.0;AttachDbFilename=" + ControlData.PathToMDF +";Integrated Security=True;Connect Timeout=30";
-            korisnikTableAdapter1.Connection.ConnectionString = "Data Source=(LocalDB)\\v11.0;AttachDbFilename=" + ControlData.PathToMDF + ";Integrated Security=True;Connect Timeout=30";
+
+            _3D_objektTableAdapter.Connection.ConnectionString = ControlData.ConnectionString;
+            korisnikTableAdapter1.Connection.ConnectionString = ControlData.ConnectionString;
 
             toolStripStatusLabel1.Text = "Spreman.";
             toolStripStatusLabel2.Text = "Molim, loginajte se pomoću vaših korisničkih podataka.";
+            listBox1.Items.Clear();
 
             menuStrip1.Items[0].Enabled = false;
             menuStrip1.Items[1].Enabled = false;
@@ -176,48 +181,77 @@ namespace Forma
 
             if ( dataGridView1.SelectedCells.Count > 0 )
             {
+                //Postavi tooltipove
                 toolStripStatusLabel1.Text = "Dohvaćam popis iz baze...";
                 toolStripStatusLabel1.Invalidate();
                 toolStripStatusLabel2.Text = "Kompajliram XNA resurse...";
                 toolStripStatusLabel2.Invalidate();
 
+                //Pokreni Manipulator, da možemo kompajlirati resurse.
                 Manipulator.DoSelect((int)dataGridView1.SelectedCells[1].Value, (string)dataGridView1.SelectedCells[2].Value);
 
+                //Napravi novu image listu i postavi 50x50 pixel thumbnail
                 treeView1.ImageList = new ImageList();
-                treeView1.ImageList.ImageSize = new Size(60, 60);
+                treeView1.ImageList.ImageSize = new Size(50, 50);
 
+                //Dodaj teksture u popis
                 for ( int i = 0; i < Manipulator.actualTextures.Count; i++ )
                 {
                     treeView1.Nodes.Add(i.ToString(), Manipulator.actualTextures[i], i);
                     treeView1.Nodes[i].SelectedImageIndex = i;
                     treeView1.ImageList.Images.Add(Manipulator.texThumbnail[i]);
-                }
+                }   
+                //Postavi tooltipove da znamo da je gotovo.
                 toolStripStatusLabel1.Text = "Gotovo!";
                 toolStripStatusLabel2.Text = "Dohvaćeno " + treeView1.Nodes.Count + " tekstura za " + (string)dataGridView1.SelectedCells[2].Value;
 
+                //Napiši autora 3D modela ispod rendera
                 DataTable autorResult = korisnikTableAdapter1.GetKorisnikByID((int)dataGridView1.SelectedCells[5].Value);
                 txtAutor.Text = "Autor: " + (string)autorResult.Rows[0][1];
 
+                //Osposobi download i daj shadere u popis.
                 downloadToolStripMenuItem.Enabled =  true;
+                listBox1.Items.Clear();
+                listBox1.Items.Add("Diffuse");
+                listBox1.Items.Add("Transparent");
             }
         }
 
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
+            //Postavi novu odabranu teksturu
             Manipulator.DoSelectTex(e.Node.Index);
-          
         }
 
         private void fullscreenToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //Trebamo ići u fullscreen?
             game1.raiseFullscreen = true;
-
         }
 
         private void logInToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void downloadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Download: minimizamo render (da ne smeta) i pokrenemo Download dialog.
+            game1.needsToMinimize = true;
+            DownloadForm form = new DownloadForm();
+            form.ShowDialog();
+            game1.needsToMinimize = false;
+
+        }
+
+        private void logInToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            //Nova log in forma
             LoginForm logForma = new LoginForm();
 
+            //Počisti popis shadera, i onesposobi sve main menu opcije 
+            // U principu, vrsta "Log out" operacije.
+            listBox1.Items.Clear();
             menuStrip1.Items[0].Enabled = false;
             menuStrip1.Items[1].Enabled = false;
             downloadToolStripMenuItem.Enabled = false;
@@ -226,29 +260,35 @@ namespace Forma
             {
                 menuStrip1.Items[0].Enabled = true;
                 menuStrip1.Items[3].Enabled = true;
-                
+
 
                 if ( ControlData.tipKorisnika != "Korisnik" )
                 {
+                    //Ako nije korisnik, omogući i upload.
                     menuStrip1.Items[1].Enabled = true;
-
-                    game.Start();
-
-                    RemakeWindow();
                 }
 
-                toolStripStatusLabel1.Text = "Dobrodošao, " + ControlData.tipKorisnika + " " + ControlData.Username +".";
+                game.Start();
+                RemakeWindow();
+
+                toolStripStatusLabel1.Text = "Dobrodošao, " + ControlData.tipKorisnika + " " + ControlData.Username + ".";
                 toolStripStatusLabel2.Text = "";
             }
         }
 
-        private void downloadToolStripMenuItem_Click(object sender, EventArgs e)
+        private void kreirajteAccountToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            game1.needsToMinimize = true;
-            DownloadForm form = new DownloadForm();
+            CreateAccount form = new CreateAccount();
             form.ShowDialog();
-            game1.needsToMinimize = false;
+        }
 
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //Postavi odabrani shader.
+            if ( listBox1.SelectedIndex == 0 )
+                Renderer.UseShaderDiffuse();
+            if ( listBox1.SelectedIndex == 1 )
+                Renderer.UseShaderTransparent();
         }
 
         
