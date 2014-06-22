@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,7 +66,7 @@
             this.teksturaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this._3D_objektTableAdapter = new WindowsFormsApplication1.Baza1DataSetTableAdapters._3D_objektTableAdapter();
             this.korisnikTableAdapter1 = new WindowsFormsApplication1.Baza1DataSetTableAdapters.korisnikTableAdapter();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.uploadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -100,6 +101,17 @@
             this.splitContainer1.Size = new System.Drawing.Size(761, 415);
             this.splitContainer1.SplitterDistance = 383;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // listBox1
+            // 
+            this.listBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(62, 332);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(307, 56);
+            this.listBox1.TabIndex = 9;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // treeView1
             // 
@@ -299,6 +311,8 @@
             // 
             // uploadNaBazuToolStripMenuItem
             // 
+            this.uploadNaBazuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.uploadToolStripMenuItem});
             this.uploadNaBazuToolStripMenuItem.Name = "uploadNaBazuToolStripMenuItem";
             this.uploadNaBazuToolStripMenuItem.Size = new System.Drawing.Size(101, 20);
             this.uploadNaBazuToolStripMenuItem.Text = "Upload na bazu";
@@ -391,16 +405,12 @@
             // 
             this.korisnikTableAdapter1.ClearBeforeFill = true;
             // 
-            // listBox1
+            // uploadToolStripMenuItem
             // 
-            this.listBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(62, 332);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(307, 56);
-            this.listBox1.TabIndex = 9;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.uploadToolStripMenuItem.Name = "uploadToolStripMenuItem";
+            this.uploadToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.uploadToolStripMenuItem.Text = "Upload";
+            this.uploadToolStripMenuItem.Click += new System.EventHandler(this.uploadToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -484,5 +494,6 @@
         private System.Windows.Forms.ToolStripMenuItem logInToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem kreirajteAccountToolStripMenuItem;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ToolStripMenuItem uploadToolStripMenuItem;
     }
 }

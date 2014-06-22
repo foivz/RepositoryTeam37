@@ -24,3 +24,4 @@ C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsFormsAppli
 C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsFormsApplication1\bin\Debug\Content\Textures\Cursor.xnb
 C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsFormsApplication1\bin\Debug\Content\Fonts\FullscreenFont.xnb
 C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsFormsApplication1\bin\Debug\Content\Shaders\TransparentShader.xnb
+C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.UploadForm.resources

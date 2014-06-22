@@ -1,0 +1,13 @@
+C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsGame1\WindowsGame1\bin\x86\Release\Content\Textures\Cursor.xnb
+C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsGame1\WindowsGame1\bin\x86\Release\Content\Textures\avatar.xnb
+C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsGame1\WindowsGame1\bin\x86\Release\Content\Shaders\GenericShader.xnb
+C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsGame1\WindowsGame1\bin\x86\Release\Content\Shaders\TransparentShader.xnb
+C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsGame1\WindowsGame1\bin\x86\Release\Content\Models\cubeUV.xnb
+C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsGame1\WindowsGame1\bin\x86\Release\Content\Fonts\FullscreenFont.xnb
+C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsGame1\WindowsGame1\bin\x86\Release\Baza_3D_render.exe.config
+C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsGame1\WindowsGame1\bin\x86\Release\Baza_3D_render.exe
+C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsGame1\WindowsGame1\bin\x86\Release\EntityFramework.dll
+C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsGame1\WindowsGame1\bin\x86\Release\EntityFramework.xml
+C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsGame1\WindowsGame1\obj\x86\Release\Baza_3D.csprojResolveAssemblyReference.cache
+C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsGame1\WindowsGame1\obj\x86\Release\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsGame1\WindowsGame1\obj\x86\Release\Baza_3D_render.exe

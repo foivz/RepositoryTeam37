@@ -34,6 +34,8 @@ namespace WindowsFormsApplication1
             {
                 ControlData.Username = user;
 
+                ControlData.korisnikID = (int)result[0][4];
+
                 DataTable tipResult = tip_korisnikaTableAdapter1.GetTipKorisnikabyID((int)result[0][4]);
 
                 ControlData.tipKorisnika = tipResult.Rows[0][1].ToString();

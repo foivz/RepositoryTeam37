@@ -5,6 +5,7 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using WindowsGame1.Data;
 
 namespace WindowsGame1
 {
@@ -113,7 +114,12 @@ namespace WindowsGame1
             Renderer.cursor = Game1.content.Load<Texture2D>("Textures/Cursor");
             Renderer.font = Game1.content.Load<SpriteFont>("Fonts/FullscreenFont");
 
-            Texture2D tex = Game1.content.Load<Texture2D>("..\\build\\content\\tex0");
+            Texture2D tex;
+            if ( Manipulator.texturePaths.Count > 0 )
+                tex = Game1.content.Load<Texture2D>("..\\build\\content\\tex0");
+            else
+                tex = Game1.content.Load<Texture2D>("Textures/Avatar");
+
             Renderer.shader.Parameters["tex0"].SetValue(tex);
             Renderer.transparentShader.Parameters["tex0"].SetValue(tex);
             Renderer.transparentShader.Parameters["transparency"].SetValue(0.5f);

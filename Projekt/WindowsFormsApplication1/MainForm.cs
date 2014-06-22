@@ -207,6 +207,7 @@ namespace Forma
 
                 //Napiši autora 3D modela ispod rendera
                 DataTable autorResult = korisnikTableAdapter1.GetKorisnikByID((int)dataGridView1.SelectedCells[5].Value);
+                
                 txtAutor.Text = "Autor: " + (string)autorResult.Rows[0][1];
 
                 //Osposobi download i daj shadere u popis.
@@ -249,6 +250,7 @@ namespace Forma
             //Nova log in forma
             LoginForm logForma = new LoginForm();
 
+            Manipulator.activeCategory = -1;
             //Počisti popis shadera, i onesposobi sve main menu opcije 
             // U principu, vrsta "Log out" operacije.
             listBox1.Items.Clear();
@@ -289,6 +291,29 @@ namespace Forma
                 Renderer.UseShaderDiffuse();
             if ( listBox1.SelectedIndex == 1 )
                 Renderer.UseShaderTransparent();
+        }
+
+        private void uploadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            game1.needsToMinimize = true;
+
+            if ( Manipulator.activeCategory != -1)
+            {
+               
+                UploadForm form = new UploadForm();
+
+                if ( form.ShowDialog() == DialogResult.OK )
+                {
+                    MessageBox.Show("Upload uspješan!");
+                }
+
+                
+            }
+            else
+                MessageBox.Show("Izaberite prvo kategoriju!");
+
+            game1.needsToMinimize = false;
+            
         }
 
         

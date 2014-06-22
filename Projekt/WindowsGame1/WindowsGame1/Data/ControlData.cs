@@ -12,11 +12,14 @@ namespace WindowsGame1
     {
         public static int X = 0, Y = 0, Width = 0, Height = 0;
 
-
+        //Naš globalni connection string za sve adaptere:
         public static string ConnectionString;
+
         //Korisnicki podaci:
         public static string Username, tipKorisnika;
+        public static int korisnikID;
 
+        //Privremeno zaustavljanje rendera za vrijeme prebacivanja sadržaja
         public static bool LOADING = false;
 
         /// <summary>

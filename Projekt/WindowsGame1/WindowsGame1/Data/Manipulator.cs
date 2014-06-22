@@ -24,6 +24,8 @@ namespace WindowsGame1.Data
             "06 - Ostalo"
         };
 
+        public static int activeCategory;
+
         //Popisi puteva + popis Imagea za thumbnail u Treeview na glavnoj Formi.
         public static string meshPath;
         public static List<string> actualTextures;
@@ -46,6 +48,8 @@ namespace WindowsGame1.Data
         /// <param name="folderName">Folder name je string iz SQL baze pod imenom "model".</param>
         public static void DoSelect(int categoryID, string folderName)
         {
+            activeCategory = categoryID;
+
             //Popisi puteva
             string apsolutePath = ControlData.PathToBinary + category[categoryID - 1] + folderName;
             ControlData.PathToDownloadable = apsolutePath;
@@ -117,7 +121,10 @@ namespace WindowsGame1.Data
 
         public static void DoSelectTex(int index)
         {
-            Renderer.shader.Parameters["tex0"].SetValue(Game1.content.Load<Texture2D>("..\\build\\content\\tex" + index.ToString()));
+            if (Renderer.shader != null)
+                Renderer.shader.Parameters["tex0"].SetValue(Game1.content.Load<Texture2D>("..\\build\\content\\tex" + index.ToString()));
+            if (Renderer.transparentShader != null)
+                Renderer.transparentShader.Parameters["tex0"].SetValue(Game1.content.Load<Texture2D>("..\\build\\content\\tex" + index.ToString()));
             Renderer.ReLoad();
         }
     }
