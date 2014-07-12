@@ -1,0 +1,4 @@
+content\Model.xnb
+content\tex0.xnb
+content\tex1.xnb
+content\FBX\20F32298\TV.fbm\TV_tex_0.xnb

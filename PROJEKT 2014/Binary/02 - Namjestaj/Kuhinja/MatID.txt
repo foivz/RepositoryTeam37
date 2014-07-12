@@ -1,0 +1,7 @@
+1 - baza: bijela keramika ili plastika za ladice.
+2 - površina: crno, polymer il neš
+3 - pipa + sudoper: krom il neš.
+
+NOTE:
+Vanjska strana kuhinje, to jest onaj dio koji nalježe na zid po onoj referenci, nije UV mapiran. 
+Sve drugo je. Vidi UV referencu.
