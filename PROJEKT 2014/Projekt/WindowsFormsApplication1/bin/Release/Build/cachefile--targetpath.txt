@@ -1,4 +1,0 @@
-content\tex0.xnb
-content\Model.xnb
-content\tex1.xnb
-content\FBX\AB081A28\TV.fbm\TV_tex_0.xnb

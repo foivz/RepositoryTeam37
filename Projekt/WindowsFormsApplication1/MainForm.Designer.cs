@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.lbxShaderi = new System.Windows.Forms.ListBox();
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,7 +44,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.mnIzbornik = new System.Windows.Forms.MenuStrip();
             this.kategorijeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kategorija1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.namjestajToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -53,6 +53,7 @@
             this.primitivesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ostaloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.uploadNaBazuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.uploadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logInToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logInToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.kreirajteAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,12 +62,9 @@
             this.downloadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.txtAutor = new System.Windows.Forms.TextBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolPoruka1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolPoruka2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.teksturaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this._3D_objektTableAdapter = new WindowsFormsApplication1.Baza1DataSetTableAdapters._3D_objektTableAdapter();
-            this.korisnikTableAdapter1 = new WindowsFormsApplication1.Baza1DataSetTableAdapters.korisnikTableAdapter();
-            this.uploadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -74,7 +72,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dobjektBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.baza1DataSet)).BeginInit();
-            this.menuStrip1.SuspendLayout();
+            this.mnIzbornik.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.teksturaBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -87,13 +85,13 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.listBox1);
+            this.splitContainer1.Panel1.Controls.Add(this.lbxShaderi);
             this.splitContainer1.Panel1.Controls.Add(this.treeView1);
             this.splitContainer1.Panel1.Controls.Add(this.dataGridView1);
             this.splitContainer1.Panel1.Controls.Add(this.label3);
             this.splitContainer1.Panel1.Controls.Add(this.label2);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
-            this.splitContainer1.Panel1.Controls.Add(this.menuStrip1);
+            this.splitContainer1.Panel1.Controls.Add(this.mnIzbornik);
             // 
             // splitContainer1.Panel2
             // 
@@ -102,16 +100,16 @@
             this.splitContainer1.SplitterDistance = 383;
             this.splitContainer1.TabIndex = 0;
             // 
-            // listBox1
+            // lbxShaderi
             // 
-            this.listBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.lbxShaderi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(62, 332);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(307, 56);
-            this.listBox1.TabIndex = 9;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.lbxShaderi.FormattingEnabled = true;
+            this.lbxShaderi.Location = new System.Drawing.Point(62, 332);
+            this.lbxShaderi.Name = "lbxShaderi";
+            this.lbxShaderi.Size = new System.Drawing.Size(307, 56);
+            this.lbxShaderi.TabIndex = 9;
+            this.lbxShaderi.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // treeView1
             // 
@@ -241,18 +239,18 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Modeli";
             // 
-            // menuStrip1
+            // mnIzbornik
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnIzbornik.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.kategorijeToolStripMenuItem,
             this.uploadNaBazuToolStripMenuItem,
             this.logInToolStripMenuItem,
             this.opcijeToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(383, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            this.mnIzbornik.Location = new System.Drawing.Point(0, 0);
+            this.mnIzbornik.Name = "mnIzbornik";
+            this.mnIzbornik.Size = new System.Drawing.Size(383, 24);
+            this.mnIzbornik.TabIndex = 0;
+            this.mnIzbornik.Text = "menuStrip1";
             // 
             // kategorijeToolStripMenuItem
             // 
@@ -317,6 +315,13 @@
             this.uploadNaBazuToolStripMenuItem.Size = new System.Drawing.Size(101, 20);
             this.uploadNaBazuToolStripMenuItem.Text = "Upload na bazu";
             // 
+            // uploadToolStripMenuItem
+            // 
+            this.uploadToolStripMenuItem.Name = "uploadToolStripMenuItem";
+            this.uploadToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.uploadToolStripMenuItem.Text = "Upload";
+            this.uploadToolStripMenuItem.Click += new System.EventHandler(this.uploadToolStripMenuItem_Click);
+            // 
             // logInToolStripMenuItem
             // 
             this.logInToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -325,7 +330,7 @@
             this.logInToolStripMenuItem.Name = "logInToolStripMenuItem";
             this.logInToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.logInToolStripMenuItem.Text = "Log in";
-            this.logInToolStripMenuItem.Click += new System.EventHandler(this.logInToolStripMenuItem_Click);
+      
             // 
             // logInToolStripMenuItem1
             // 
@@ -377,40 +382,25 @@
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1,
-            this.toolStripStatusLabel2});
+            this.toolPoruka1,
+            this.toolPoruka2});
             this.statusStrip1.Location = new System.Drawing.Point(0, 393);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(761, 22);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // toolStripStatusLabel1
+            // toolPoruka1
             // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
-            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
+            this.toolPoruka1.Name = "toolPoruka1";
+            this.toolPoruka1.Size = new System.Drawing.Size(118, 17);
+            this.toolPoruka1.Text = "toolStripStatusLabel1";
             // 
-            // toolStripStatusLabel2
+            // toolPoruka2
             // 
-            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(118, 17);
-            this.toolStripStatusLabel2.Text = "toolStripStatusLabel2";
-            // 
-            // _3D_objektTableAdapter
-            // 
-            this._3D_objektTableAdapter.ClearBeforeFill = true;
-            // 
-            // korisnikTableAdapter1
-            // 
-            this.korisnikTableAdapter1.ClearBeforeFill = true;
-            // 
-            // uploadToolStripMenuItem
-            // 
-            this.uploadToolStripMenuItem.Name = "uploadToolStripMenuItem";
-            this.uploadToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.uploadToolStripMenuItem.Text = "Upload";
-            this.uploadToolStripMenuItem.Click += new System.EventHandler(this.uploadToolStripMenuItem_Click);
+            this.toolPoruka2.Name = "toolPoruka2";
+            this.toolPoruka2.Size = new System.Drawing.Size(118, 17);
+            this.toolPoruka2.Text = "toolStripStatusLabel2";
             // 
             // MainForm
             // 
@@ -419,7 +409,7 @@
             this.ClientSize = new System.Drawing.Size(761, 415);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.splitContainer1);
-            this.MainMenuStrip = this.menuStrip1;
+            this.MainMenuStrip = this.mnIzbornik;
             this.Name = "MainForm";
             this.Text = "Baza 3D modela [By: Team37]";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
@@ -427,7 +417,7 @@
             this.Shown += new System.EventHandler(this.MainForm_Shown);
             this.LocationChanged += new System.EventHandler(this.splitContainer1_Panel2_SizeChanged);
             this.SizeChanged += new System.EventHandler(this.splitContainer1_Panel2_SizeChanged);
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.MainForm_Paint);
+          
             this.Leave += new System.EventHandler(this.MainForm_Leave);
             this.Resize += new System.EventHandler(this.splitContainer1_Panel2_SizeChanged);
             this.splitContainer1.Panel1.ResumeLayout(false);
@@ -439,8 +429,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dobjektBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.baza1DataSet)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.mnIzbornik.ResumeLayout(false);
+            this.mnIzbornik.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.teksturaBindingSource)).EndInit();
@@ -454,7 +444,7 @@
         public System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.MenuStrip mnIzbornik;
         private System.Windows.Forms.ToolStripMenuItem kategorijeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem uploadNaBazuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kategorija1ToolStripMenuItem;
@@ -462,7 +452,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private WindowsFormsApplication1.Baza1DataSet baza1DataSet;
         private System.Windows.Forms.BindingSource dobjektBindingSource;
-        private WindowsFormsApplication1.Baza1DataSetTableAdapters._3D_objektTableAdapter _3D_objektTableAdapter;
        
         private System.Windows.Forms.BindingSource teksturaBindingSource;
         
@@ -484,16 +473,15 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn korisnikidDataGridViewTextBoxColumn;
         private System.Windows.Forms.TreeView treeView1;
         private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
+        private System.Windows.Forms.ToolStripStatusLabel toolPoruka1;
+        private System.Windows.Forms.ToolStripStatusLabel toolPoruka2;
         private System.Windows.Forms.ToolStripMenuItem opcijeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fullscreenToolStripMenuItem;
         private System.Windows.Forms.TextBox txtAutor;
-        private WindowsFormsApplication1.Baza1DataSetTableAdapters.korisnikTableAdapter korisnikTableAdapter1;
         public System.Windows.Forms.ToolStripMenuItem downloadToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logInToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem kreirajteAccountToolStripMenuItem;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox lbxShaderi;
         private System.Windows.Forms.ToolStripMenuItem uploadToolStripMenuItem;
     }
 }

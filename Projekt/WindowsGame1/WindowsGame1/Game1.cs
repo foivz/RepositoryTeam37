@@ -59,8 +59,6 @@ namespace WindowsGame1
             Content.RootDirectory = "Content";
 
             content = Content;
-
-           
         }
 
         
@@ -92,13 +90,14 @@ namespace WindowsGame1
 
             //Ovaj dio zove Windows API da mu kaže da 3D render mora uvjek biti "on top" prozor, u protivnom
             //on nestane svaki puta kad se na formi nešto klikne.
-            //User32.SetWindowPos((uint)this.Window.Handle, -1, 0, 0, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight, 0);
+            User32.SetWindowPos((uint)this.Window.Handle, -1, 0, 0, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight, 0);
 
            
             //Tu samo učitamo standardnu kocku za prikazati, da se nešto renderira prije nego li se spojimo
             //na bazu i odaberemo vlastite modele.
-            ModelDataBase.Load(Content);
-            ModelDataBase.LoadIntoRenderer(0);
+            Renderer.mesh = Content.Load<Model>("Models/cubeUV");
+            Renderer.shader = Content.Load<Effect>("Shaders/GenericShader");
+            Renderer.shader.Parameters["tex0"].SetValue(Content.Load<Texture2D>("Textures/avatar"));
 
             Renderer.cursor = Content.Load<Texture2D>("Textures/Cursor");
             Renderer.font = Content.Load<SpriteFont>("Fonts/FullscreenFont");
@@ -149,8 +148,6 @@ namespace WindowsGame1
                 graphics.PreferredBackBufferWidth = screenX;
                 graphics.PreferredBackBufferHeight = screenY;
                 raiseFullscreen = false;
-               
-                //User32.SetWindowPos((uint)this.Window.Handle, 0, 0, 0, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight, 0);
 
                 graphics.ApplyChanges();
 

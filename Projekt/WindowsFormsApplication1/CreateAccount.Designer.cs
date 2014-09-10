@@ -28,112 +28,107 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.korisnikTableAdapter1 = new WindowsFormsApplication1.Baza1DataSetTableAdapters.korisnikTableAdapter();
+            this.lbKorisnickoIme = new System.Windows.Forms.Label();
+            this.lbEmail = new System.Windows.Forms.Label();
+            this.lbLozinka = new System.Windows.Forms.Label();
+            this.lbPonoviteLozinku = new System.Windows.Forms.Label();
+            this.tbKorisnickoIme = new System.Windows.Forms.TextBox();
+            this.tbEmail = new System.Windows.Forms.TextBox();
+            this.mtbLozinka = new System.Windows.Forms.MaskedTextBox();
+            this.mtbLozinka2 = new System.Windows.Forms.MaskedTextBox();
+            this.btnKreiraj = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // lbKorisnickoIme
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(25, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Korisničko ime:";
+            this.lbKorisnickoIme.AutoSize = true;
+            this.lbKorisnickoIme.Location = new System.Drawing.Point(25, 28);
+            this.lbKorisnickoIme.Name = "lbKorisnickoIme";
+            this.lbKorisnickoIme.Size = new System.Drawing.Size(78, 13);
+            this.lbKorisnickoIme.TabIndex = 0;
+            this.lbKorisnickoIme.Text = "Korisničko ime:";
             // 
-            // label2
+            // lbEmail
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(68, 54);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Email:";
+            this.lbEmail.AutoSize = true;
+            this.lbEmail.Location = new System.Drawing.Point(68, 54);
+            this.lbEmail.Name = "lbEmail";
+            this.lbEmail.Size = new System.Drawing.Size(35, 13);
+            this.lbEmail.TabIndex = 1;
+            this.lbEmail.Text = "Email:";
             // 
-            // label3
+            // lbLozinka
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(56, 80);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Lozinka:";
+            this.lbLozinka.AutoSize = true;
+            this.lbLozinka.Location = new System.Drawing.Point(56, 80);
+            this.lbLozinka.Name = "lbLozinka";
+            this.lbLozinka.Size = new System.Drawing.Size(47, 13);
+            this.lbLozinka.TabIndex = 2;
+            this.lbLozinka.Text = "Lozinka:";
             // 
-            // label4
+            // lbPonoviteLozinku
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(15, 106);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(88, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Ponovite lozinku:";
+            this.lbPonoviteLozinku.AutoSize = true;
+            this.lbPonoviteLozinku.Location = new System.Drawing.Point(15, 106);
+            this.lbPonoviteLozinku.Name = "lbPonoviteLozinku";
+            this.lbPonoviteLozinku.Size = new System.Drawing.Size(88, 13);
+            this.lbPonoviteLozinku.TabIndex = 3;
+            this.lbPonoviteLozinku.Text = "Ponovite lozinku:";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(109, 25);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(277, 20);
-            this.textBox1.TabIndex = 5;
+            this.tbKorisnickoIme.Location = new System.Drawing.Point(109, 25);
+            this.tbKorisnickoIme.Name = "textBox1";
+            this.tbKorisnickoIme.Size = new System.Drawing.Size(277, 20);
+            this.tbKorisnickoIme.TabIndex = 5;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(109, 51);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(277, 20);
-            this.textBox2.TabIndex = 6;
+            this.tbEmail.Location = new System.Drawing.Point(109, 51);
+            this.tbEmail.Name = "textBox2";
+            this.tbEmail.Size = new System.Drawing.Size(277, 20);
+            this.tbEmail.TabIndex = 6;
             // 
             // maskedTextBox1
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(109, 77);
-            this.maskedTextBox1.Mask = "×";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(277, 20);
-            this.maskedTextBox1.TabIndex = 7;
+            this.mtbLozinka.Location = new System.Drawing.Point(109, 77);
+            this.mtbLozinka.Name = "maskedTextBox1";
+            this.mtbLozinka.PasswordChar = '×';
+            this.mtbLozinka.Size = new System.Drawing.Size(277, 20);
+            this.mtbLozinka.TabIndex = 7;
             // 
             // maskedTextBox2
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(109, 103);
-            this.maskedTextBox2.Mask = "×";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(277, 20);
-            this.maskedTextBox2.TabIndex = 8;
+            this.mtbLozinka2.Location = new System.Drawing.Point(109, 103);
+            this.mtbLozinka2.Name = "maskedTextBox2";
+            this.mtbLozinka2.PasswordChar = '×';
+            this.mtbLozinka2.Size = new System.Drawing.Size(277, 20);
+            this.mtbLozinka2.TabIndex = 8;
             // 
-            // button1
+            // btnKreiraj
             // 
-            this.button1.Location = new System.Drawing.Point(18, 153);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(368, 32);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Kreiraj!";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // korisnikTableAdapter1
-            // 
-            this.korisnikTableAdapter1.ClearBeforeFill = true;
+            this.btnKreiraj.Location = new System.Drawing.Point(18, 153);
+            this.btnKreiraj.Name = "btnKreiraj";
+            this.btnKreiraj.Size = new System.Drawing.Size(368, 32);
+            this.btnKreiraj.TabIndex = 9;
+            this.btnKreiraj.Text = "Kreiraj!";
+            this.btnKreiraj.UseVisualStyleBackColor = true;
+            this.btnKreiraj.Click += new System.EventHandler(this.btnKreiraj_click);
             // 
             // CreateAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(398, 205);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.maskedTextBox2);
-            this.Controls.Add(this.maskedTextBox1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnKreiraj);
+            this.Controls.Add(this.mtbLozinka2);
+            this.Controls.Add(this.mtbLozinka);
+            this.Controls.Add(this.tbEmail);
+            this.Controls.Add(this.tbKorisnickoIme);
+            this.Controls.Add(this.lbPonoviteLozinku);
+            this.Controls.Add(this.lbLozinka);
+            this.Controls.Add(this.lbEmail);
+            this.Controls.Add(this.lbKorisnickoIme);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "CreateAccount";
             this.Text = "Kreirajte svoj novi korisnički račun";
@@ -144,15 +139,14 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
-        private System.Windows.Forms.Button button1;
-        private Baza1DataSetTableAdapters.korisnikTableAdapter korisnikTableAdapter1;
+        private System.Windows.Forms.Label lbKorisnickoIme;
+        private System.Windows.Forms.Label lbEmail;
+        private System.Windows.Forms.Label lbLozinka;
+        private System.Windows.Forms.Label lbPonoviteLozinku;
+        private System.Windows.Forms.TextBox tbKorisnickoIme;
+        private System.Windows.Forms.TextBox tbEmail;
+        private System.Windows.Forms.MaskedTextBox mtbLozinka;
+        private System.Windows.Forms.MaskedTextBox mtbLozinka2;
+        private System.Windows.Forms.Button btnKreiraj;
     }
 }

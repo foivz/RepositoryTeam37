@@ -1,3 +1,0 @@
-C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsGame1\WindowsGame1Content\obj\x86\Release\WindowsGame1Content.contentprojResolveAssemblyReference.cache
-C:\Users\TAJANA\Desktop\PROJEKT 2014\Projekt\WindowsGame1\WindowsGame1Content\obj\x86\Release\WindowsGame1Content.contentprojResolveAssemblyReference.cache
-C:\Users\Danijel\Downloads\PROJEKT 2014\Projekt\WindowsGame1\WindowsGame1Content\obj\x86\Release\WindowsGame1Content.contentprojResolveAssemblyReference.cache

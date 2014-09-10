@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.lbDownload = new System.Windows.Forms.Label();
+            this.btnDownload = new System.Windows.Forms.Button();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.SuspendLayout();
             // 
@@ -48,34 +48,34 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(248, 242);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
-            // label1
+            // lbDownload
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Download";
+            this.lbDownload.AutoSize = true;
+            this.lbDownload.Location = new System.Drawing.Point(12, 22);
+            this.lbDownload.Name = "lbDownload";
+            this.lbDownload.Size = new System.Drawing.Size(55, 13);
+            this.lbDownload.TabIndex = 1;
+            this.lbDownload.Text = "Download";
             // 
-            // button1
+            // btnDownload
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.SystemColors.Highlight;
-            this.button1.Location = new System.Drawing.Point(149, 286);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(111, 38);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Download";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnDownload.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDownload.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnDownload.Location = new System.Drawing.Point(149, 286);
+            this.btnDownload.Name = "btnDownload";
+            this.btnDownload.Size = new System.Drawing.Size(111, 38);
+            this.btnDownload.TabIndex = 2;
+            this.btnDownload.Text = "Download";
+            this.btnDownload.UseVisualStyleBackColor = false;
+            this.btnDownload.Click += new System.EventHandler(this.btbDownload_click);
             // 
             // DownloadForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(272, 336);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnDownload);
+            this.Controls.Add(this.lbDownload);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "DownloadForm";
             this.Text = "Download";
@@ -88,8 +88,8 @@
         #endregion
 
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lbDownload;
+        private System.Windows.Forms.Button btnDownload;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
     }
 }

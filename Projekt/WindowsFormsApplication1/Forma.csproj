@@ -91,6 +91,7 @@
     <Compile Include="CreateAccount.Designer.cs">
       <DependentUpon>CreateAccount.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataBaseManager.cs" />
     <Compile Include="DownloadForm.cs">
       <SubType>Form</SubType>
     </Compile>

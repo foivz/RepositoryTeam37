@@ -31,7 +31,7 @@ namespace WindowsGame1
         public static string PathToDownloadable = "";
 
 
-        /// <summary>
+        /// <su
         /// Formira apsolutni path string do Binary foldera.
         /// </summary>
         public static void DajPutDoBinary()

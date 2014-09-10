@@ -28,27 +28,25 @@ namespace WindowsFormsApplication1
 
         private void UploadForm_Load(object sender, EventArgs e)
         {
-            _3D_objektTableAdapter1.Connection.ConnectionString = ControlData.ConnectionString;
-
-            label1.Text = "Upload kao: " + ControlData.Username + ", " + ControlData.tipKorisnika;
-            label2.Text = "Kategorija: " + Manipulator.category[Manipulator.activeCategory -1 ];
+            lbKorisnik.Text = "Upload kao: " + ControlData.Username + ", " + ControlData.tipKorisnika;
+            lbKategorija.Text = "Kategorija: " + Manipulator.category[Manipulator.activeCategory - 1];
 
             listaCheckBox = new List<object>();
             
             Paths = new List<string>();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnNadji_Click(object sender, EventArgs e)
         {
             if ( folderBrowserDialog1.ShowDialog() == DialogResult.OK )
             {
-                textBox1.Text = folderBrowserDialog1.SelectedPath;
+                tbLokacija.Text = folderBrowserDialog1.SelectedPath;
 
                 listaCheckBox = new List<object>();
                 FBXpath = "";
                 Paths = new List<string>();
 
-                string[] contents = Directory.GetFiles(textBox1.Text);
+                string[] contents = Directory.GetFiles(tbLokacija.Text);
 
                 for ( int i = 0; i < contents.Length; i++ )
                 {
@@ -68,10 +66,10 @@ namespace WindowsFormsApplication1
                             box.Text = split[split.Length-1];
                             box.Checked = true;
                             box.Enabled = false;
-                            box.Parent = flowLayoutPanel1;
+                            box.Parent = flowLayoutPanel;
                             box.Width = box.Parent.Width;
 
-                            flowLayoutPanel1.Controls.Add(box);
+                            flowLayoutPanel.Controls.Add(box);
                             listaCheckBox.Add(box);
 
                             nadjeno = true;
@@ -89,10 +87,10 @@ namespace WindowsFormsApplication1
                         CheckBox box = new CheckBox();
                         box.Text = split[split.Length-1];
                         box.Checked = false;
-                        box.Parent = flowLayoutPanel1;
+                        box.Parent = flowLayoutPanel;
                         box.Width = box.Parent.Width;
 
-                        flowLayoutPanel1.Controls.Add(box);
+                        flowLayoutPanel.Controls.Add(box);
                         listaCheckBox.Add(box);
                     }
 
@@ -103,16 +101,16 @@ namespace WindowsFormsApplication1
                 MessageBox.Show("Odabrani folder ne sadrži niti jedan FBX fajl. Pobrinite se da odabrani folder sadrži barem jedan FBX fajl i teksture koje želite uploadati!");
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnUpload_click(object sender, EventArgs e)
         {
             if ( nadjeno )
             {
-                if ( textBox2.Text != "" )
+                if ( tbFolder.Text != "" )
                 {
-                    if (!textBox2.Text.Contains('\\'))
+                    if (!tbFolder.Text.Contains('\\'))
                     {
 
-                        string destinationDirectory = ControlData.PathToBinary + "\\" + Manipulator.category[Manipulator.activeCategory-1] + "\\" + textBox2.Text;
+                        string destinationDirectory = ControlData.PathToBinary + "\\" + Manipulator.category[Manipulator.activeCategory-1] + "\\" + tbFolder.Text;
 
                         Directory.CreateDirectory(destinationDirectory);
                         destinationDirectory += "\\";
@@ -122,14 +120,10 @@ namespace WindowsFormsApplication1
                             if ( ((CheckBox)listaCheckBox[i]).Checked )
                             {
                                 File.Copy(Paths[i], destinationDirectory + ((CheckBox)listaCheckBox[i]).Text);
-
                             }
                         }
-
                         //INSERT
-                        _3D_objektTableAdapter1.Upload(Manipulator.activeCategory, "\\" + textBox2.Text + "\\", textBox3.Text, textBox4.Text, ControlData.korisnikID);
-
-
+                        Forma.DataBaseManager._3D_Adapter.Upload(Manipulator.activeCategory , tbFolder.Text, tbNovoIme.Text, tbOpis.Text, ControlData.korisnikID);
                         this.DialogResult = DialogResult.OK;
                     }
                     else

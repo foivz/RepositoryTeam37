@@ -1,26 +1,30 @@
-D:\Code projects\Projekt_PI\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\Shaders\GenericShader.xnb
-D:\Code projects\Projekt_PI\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\Models\cubeUV.xnb
-D:\Code projects\Projekt_PI\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\Textures\avatar.xnb
-D:\Code projects\Projekt_PI\WindowsGame1\WindowsGame1\bin\x86\Debug\WindowsGame1.exe
-D:\Code projects\Projekt_PI\WindowsGame1\WindowsGame1\bin\x86\Debug\WindowsGame1.pdb
-D:\Code projects\Projekt_PI\WindowsGame1\WindowsGame1\obj\x86\Debug\Baza_3D.csprojResolveAssemblyReference.cache
-D:\Code projects\Projekt_PI\WindowsGame1\WindowsGame1\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-D:\Code projects\Projekt_PI\WindowsGame1\WindowsGame1\obj\x86\Debug\WindowsGame1.MainForm.resources
-D:\Code projects\Projekt_PI\WindowsGame1\WindowsGame1\obj\x86\Debug\Baza_3D.csproj.GenerateResource.Cache
-D:\Code projects\Projekt_PI\WindowsGame1\WindowsGame1\obj\x86\Debug\WindowsGame1.exe
-D:\Code projects\Projekt_PI\WindowsGame1\WindowsGame1\obj\x86\Debug\WindowsGame1.pdb
-C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\Shaders\GenericShader.xnb
-C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\Models\cubeUV.xnb
-C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\Textures\avatar.xnb
-C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsGame1\WindowsGame1\bin\x86\Debug\EntityFramework.dll
-C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsGame1\WindowsGame1\bin\x86\Debug\EntityFramework.xml
-C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsGame1\WindowsGame1\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsGame1\WindowsGame1\obj\x86\Debug\Baza_3D.csprojResolveAssemblyReference.cache
-C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\Textures\Cursor.xnb
-C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsGame1\WindowsGame1\bin\x86\Debug\Baza_3D_render.exe.config
-C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsGame1\WindowsGame1\bin\x86\Debug\Baza_3D_render.exe
-C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsGame1\WindowsGame1\bin\x86\Debug\Baza_3D_render.pdb
-C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsGame1\WindowsGame1\obj\x86\Debug\Baza_3D_render.exe
-C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsGame1\WindowsGame1\obj\x86\Debug\Baza_3D_render.pdb
-C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\Fonts\FullscreenFont.xnb
-C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\Shaders\TransparentShader.xnb
+D:\Shared\RepositoryTeam37-master\Projekt\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\Textures\Cursor.xnb
+D:\Shared\RepositoryTeam37-master\Projekt\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\Textures\avatar.xnb
+D:\Shared\RepositoryTeam37-master\Projekt\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\Shaders\GenericShader.xnb
+D:\Shared\RepositoryTeam37-master\Projekt\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\Shaders\TransparentShader.xnb
+D:\Shared\RepositoryTeam37-master\Projekt\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\Models\cubeUV.xnb
+D:\Shared\RepositoryTeam37-master\Projekt\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\Fonts\FullscreenFont.xnb
+D:\Shared\RepositoryTeam37-master\Projekt\WindowsGame1\WindowsGame1\bin\x86\Debug\Baza_3D_render.exe.config
+D:\Shared\RepositoryTeam37-master\Projekt\WindowsGame1\WindowsGame1\bin\x86\Debug\Baza_3D_render.exe
+D:\Shared\RepositoryTeam37-master\Projekt\WindowsGame1\WindowsGame1\bin\x86\Debug\Baza_3D_render.pdb
+D:\Shared\RepositoryTeam37-master\Projekt\WindowsGame1\WindowsGame1\bin\x86\Debug\EntityFramework.dll
+D:\Shared\RepositoryTeam37-master\Projekt\WindowsGame1\WindowsGame1\bin\x86\Debug\EntityFramework.xml
+D:\Shared\RepositoryTeam37-master\Projekt\WindowsGame1\WindowsGame1\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+D:\Shared\RepositoryTeam37-master\Projekt\WindowsGame1\WindowsGame1\obj\x86\Debug\Baza_3D_render.exe
+D:\Shared\RepositoryTeam37-master\Projekt\WindowsGame1\WindowsGame1\obj\x86\Debug\Baza_3D_render.pdb
+C:\Users\Marita\Google disk\FOI\PI\Baza 3d modela\RepositoryTeam37-master\Projekt\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\Textures\Cursor.xnb
+C:\Users\Marita\Google disk\FOI\PI\Baza 3d modela\RepositoryTeam37-master\Projekt\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\Textures\avatar.xnb
+C:\Users\Marita\Google disk\FOI\PI\Baza 3d modela\RepositoryTeam37-master\Projekt\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\Shaders\GenericShader.xnb
+C:\Users\Marita\Google disk\FOI\PI\Baza 3d modela\RepositoryTeam37-master\Projekt\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\Shaders\TransparentShader.xnb
+C:\Users\Marita\Google disk\FOI\PI\Baza 3d modela\RepositoryTeam37-master\Projekt\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\Models\cubeUV.xnb
+C:\Users\Marita\Google disk\FOI\PI\Baza 3d modela\RepositoryTeam37-master\Projekt\WindowsGame1\WindowsGame1\bin\x86\Debug\Content\Fonts\FullscreenFont.xnb
+C:\Users\Marita\Google disk\FOI\PI\Baza 3d modela\RepositoryTeam37-master\Projekt\WindowsGame1\WindowsGame1\bin\x86\Debug\Baza_3D_render.exe.config
+C:\Users\Marita\Google disk\FOI\PI\Baza 3d modela\RepositoryTeam37-master\Projekt\WindowsGame1\WindowsGame1\bin\x86\Debug\Baza_3D_render.exe
+C:\Users\Marita\Google disk\FOI\PI\Baza 3d modela\RepositoryTeam37-master\Projekt\WindowsGame1\WindowsGame1\bin\x86\Debug\Baza_3D_render.pdb
+C:\Users\Marita\Google disk\FOI\PI\Baza 3d modela\RepositoryTeam37-master\Projekt\WindowsGame1\WindowsGame1\bin\x86\Debug\EntityFramework.dll
+C:\Users\Marita\Google disk\FOI\PI\Baza 3d modela\RepositoryTeam37-master\Projekt\WindowsGame1\WindowsGame1\bin\x86\Debug\EntityFramework.xml
+C:\Users\Marita\Google disk\FOI\PI\Baza 3d modela\RepositoryTeam37-master\Projekt\WindowsGame1\WindowsGame1\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Marita\Google disk\FOI\PI\Baza 3d modela\RepositoryTeam37-master\Projekt\WindowsGame1\WindowsGame1\obj\x86\Debug\Baza_3D_render.exe
+C:\Users\Marita\Google disk\FOI\PI\Baza 3d modela\RepositoryTeam37-master\Projekt\WindowsGame1\WindowsGame1\obj\x86\Debug\Baza_3D_render.pdb
+C:\Users\Marita\Google disk\FOI\PI\Baza 3d modela\RepositoryTeam37-master\Projekt\WindowsGame1\WindowsGame1\obj\x86\Debug\Baza_3D.csprojResolveAssemblyReference.cache
+D:\Shared\RepositoryTeam37-master\Projekt\WindowsGame1\WindowsGame1\obj\x86\Debug\Baza_3D.csprojResolveAssemblyReference.cache

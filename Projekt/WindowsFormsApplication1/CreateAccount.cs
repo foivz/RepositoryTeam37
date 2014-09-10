@@ -16,17 +16,15 @@ namespace WindowsFormsApplication1
         public CreateAccount()
         {
             InitializeComponent();
-
-            korisnikTableAdapter1.Connection.ConnectionString = ControlData.ConnectionString;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnKreiraj_click(object sender, EventArgs e)
         {
-            if ( maskedTextBox1.Text == maskedTextBox2.Text )
+            if ( mtbLozinka.Text == mtbLozinka2.Text )
             {
-                if ( textBox1.Text.Length > 3 )
+                if ( tbKorisnickoIme.Text.Length > 3 )
                 {
-                    string[] split = textBox2.Text.Split('@');
+                    string[] split = tbEmail.Text.Split('@');
 
                     if ( split.Length == 2)
                     {
@@ -34,8 +32,9 @@ namespace WindowsFormsApplication1
 
                         if ( split2.Length > 1 )
                         {
-                            int success = korisnikTableAdapter1.DodajKorisnika(textBox1.Text, maskedTextBox1.Text, textBox2.Text, 3);
-                            MessageBox.Show("Korisnički račun " + textBox1.Text + " uspješno kreiran!");
+                            int succes = Forma.DataBaseManager.korisnik_Adapter.DodajKorisnika(tbKorisnickoIme.Text, mtbLozinka.Text, tbEmail.Text, 3);
+
+                            MessageBox.Show("Korisnički račun " + tbKorisnickoIme.Text + " uspješno kreiran!");
                             this.Close();
                         }
                         else
@@ -51,7 +50,6 @@ namespace WindowsFormsApplication1
             else
             MessageBox.Show("Lozinke se ne podudaraju!");
         }
-
     
     }
 }

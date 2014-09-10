@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>Textures\Cursor.png</Source>
+      <Name>Textures\Cursor</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Marita\Google disk\FOI\PI\Baza 3d modela\RepositoryTeam37-master\Projekt\WindowsGame1\WindowsGame1\bin\x86\Release\Content\Textures\Cursor.xnb</Output>
+      <Time>2014-09-01T07:26:42+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Textures\avatar.jpg</Source>
+      <Name>Textures\avatar</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Marita\Google disk\FOI\PI\Baza 3d modela\RepositoryTeam37-master\Projekt\WindowsGame1\WindowsGame1\bin\x86\Release\Content\Textures\avatar.xnb</Output>
+      <Time>2014-09-01T07:26:42+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Shaders\GenericShader.fx</Source>
+      <Name>Shaders\GenericShader</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Marita\Google disk\FOI\PI\Baza 3d modela\RepositoryTeam37-master\Projekt\WindowsGame1\WindowsGame1\bin\x86\Release\Content\Shaders\GenericShader.xnb</Output>
+      <Time>2014-09-01T07:26:38+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Shaders\TransparentShader.fx</Source>
+      <Name>Shaders\TransparentShader</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Marita\Google disk\FOI\PI\Baza 3d modela\RepositoryTeam37-master\Projekt\WindowsGame1\WindowsGame1\bin\x86\Release\Content\Shaders\TransparentShader.xnb</Output>
+      <Time>2014-09-01T07:26:40+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\cubeUV.FBX</Source>
+      <Name>Models\cubeUV</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Marita\Google disk\FOI\PI\Baza 3d modela\RepositoryTeam37-master\Projekt\WindowsGame1\WindowsGame1\bin\x86\Release\Content\Models\cubeUV.xnb</Output>
+      <Time>2014-09-01T07:26:36+02:00</Time>
+      <Dependency>
+        <Key>C:\Users\Marita\Google disk\FOI\PI\Baza 3d modela\RepositoryTeam37-master\Projekt\WindowsGame1\WindowsGame1\obj\x86\Release\Models\cubeUV_0.xml</Key>
+        <Value>2014-09-05T00:10:01.5125178+02:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Fonts\FullscreenFont.spritefont</Source>
+      <Name>Fonts\FullscreenFont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Marita\Google disk\FOI\PI\Baza 3d modela\RepositoryTeam37-master\Projekt\WindowsGame1\WindowsGame1\bin\x86\Release\Content\Fonts\FullscreenFont.xnb</Output>
+      <Time>2014-09-01T07:26:36+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Models\cubeUV.FBX</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>C:\Users\Marita\Google disk\FOI\PI\Baza 3d modela\RepositoryTeam37-master\Projekt\WindowsGame1\WindowsGame1\obj\x86\Release\Models\cubeUV_0.xml</Output>
+      <Time>2014-09-01T07:26:36+02:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <ContentProjectGUID>{1BA1F8CC-6FAC-4FB8-BF2F-A38D3B3F36F4}</ContentProjectGUID>
+      <TargetPlatform>Windows</TargetPlatform>
+      <TargetProfile>Reach</TargetProfile>
+      <BuildConfiguration>Release</BuildConfiguration>
+      <CompressContent>true</CompressContent>
+      <RootDirectory>C:\Users\Marita\Google disk\FOI\PI\Baza 3d modela\RepositoryTeam37-master\Projekt\WindowsGame1\WindowsGame1Content\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Marita\Google disk\FOI\PI\Baza 3d modela\RepositoryTeam37-master\Projekt\WindowsGame1\WindowsGame1\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Marita\Google disk\FOI\PI\Baza 3d modela\RepositoryTeam37-master\Projekt\WindowsGame1\WindowsGame1\obj\x86\Release\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Marita\Google disk\FOI\PI\Baza 3d modela\RepositoryTeam37-master\Projekt\WindowsGame1\WindowsGame1\bin\x86\Release\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2011-09-01T16:22:30+02:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2011-09-01T16:22:30+02:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2011-09-01T16:22:30+02:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2011-09-01T16:22:30+02:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2011-09-01T16:22:30+02:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2011-09-01T16:22:30+02:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2014-06-20T00:58:26.3633257+02:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>

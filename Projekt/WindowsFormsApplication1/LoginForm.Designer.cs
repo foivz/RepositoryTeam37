@@ -28,80 +28,69 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.korisnikTableAdapter1 = new WindowsFormsApplication1.Baza1DataSetTableAdapters.korisnikTableAdapter();
-            this.tip_korisnikaTableAdapter1 = new WindowsFormsApplication1.Baza1DataSetTableAdapters.tip_korisnikaTableAdapter();
+            this.lbIme = new System.Windows.Forms.Label();
+            this.lbLozinka = new System.Windows.Forms.Label();
+            this.tbKorisnickoIme = new System.Windows.Forms.TextBox();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.mtbLozinka = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
-            // label1
+            // lbIme
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(51, 67);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(24, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Ime";
+            this.lbIme.AutoSize = true;
+            this.lbIme.Location = new System.Drawing.Point(51, 67);
+            this.lbIme.Name = "lbIme";
+            this.lbIme.Size = new System.Drawing.Size(24, 13);
+            this.lbIme.TabIndex = 0;
+            this.lbIme.Text = "Ime";
             // 
-            // label2
+            // lbLozinka
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(51, 111);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Lozinka";
+            this.lbLozinka.AutoSize = true;
+            this.lbLozinka.Location = new System.Drawing.Point(51, 111);
+            this.lbLozinka.Name = "lbLozinka";
+            this.lbLozinka.Size = new System.Drawing.Size(44, 13);
+            this.lbLozinka.TabIndex = 1;
+            this.lbLozinka.Text = "Lozinka";
             // 
-            // textBox1
+            // tbKorisnickoIme
             // 
-            this.textBox1.Location = new System.Drawing.Point(143, 64);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(167, 20);
-            this.textBox1.TabIndex = 2;
+            this.tbKorisnickoIme.Location = new System.Drawing.Point(143, 64);
+            this.tbKorisnickoIme.Name = "tbKorisnickoIme";
+            this.tbKorisnickoIme.Size = new System.Drawing.Size(167, 20);
+            this.tbKorisnickoIme.TabIndex = 2;
             // 
-            // button1
+            // btnLogin
             // 
-            this.button1.Location = new System.Drawing.Point(258, 189);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(109, 28);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Login";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnLogin.Location = new System.Drawing.Point(258, 189);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(109, 28);
+            this.btnLogin.TabIndex = 4;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_click);
             // 
-            // maskedTextBox1
+            // mtbLozinka
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(143, 108);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.PasswordChar = '●';
-            this.maskedTextBox1.Size = new System.Drawing.Size(167, 20);
-            this.maskedTextBox1.TabIndex = 3;
-            // 
-            // korisnikTableAdapter1
-            // 
-            this.korisnikTableAdapter1.ClearBeforeFill = true;
-            // 
-            // tip_korisnikaTableAdapter1
-            // 
-            this.tip_korisnikaTableAdapter1.ClearBeforeFill = true;
+            this.mtbLozinka.Location = new System.Drawing.Point(143, 108);
+            this.mtbLozinka.Name = "mtbLozinka";
+            this.mtbLozinka.PasswordChar = '●';
+            this.mtbLozinka.Size = new System.Drawing.Size(167, 20);
+            this.mtbLozinka.TabIndex = 3;
             // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(370, 229);
-            this.Controls.Add(this.maskedTextBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.mtbLozinka);
+            this.Controls.Add(this.btnLogin);
+            this.Controls.Add(this.tbKorisnickoIme);
+            this.Controls.Add(this.lbLozinka);
+            this.Controls.Add(this.lbIme);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "LoginForm";
             this.Text = "LoginForm";
-            this.Load += new System.EventHandler(this.LoginForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -109,12 +98,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private Baza1DataSetTableAdapters.korisnikTableAdapter korisnikTableAdapter1;
-        private Baza1DataSetTableAdapters.tip_korisnikaTableAdapter tip_korisnikaTableAdapter1;
+        private System.Windows.Forms.Label lbIme;
+        private System.Windows.Forms.Label lbLozinka;
+        private System.Windows.Forms.TextBox tbKorisnickoIme;
+        private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.MaskedTextBox mtbLozinka;
     }
 }

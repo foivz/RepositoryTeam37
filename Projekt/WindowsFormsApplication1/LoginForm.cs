@@ -18,38 +18,20 @@ namespace WindowsFormsApplication1
             InitializeComponent();
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void btnLogin_click(object sender, EventArgs e)
         {
+            string user = tbKorisnickoIme.Text;
+            string pass = mtbLozinka.Text;
 
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            string user = textBox1.Text;
-            string pass = maskedTextBox1.Text;
-
-            Baza1DataSet.korisnikDataTable result = korisnikTableAdapter1.VerifyUser(user, pass);
-
-            if ( result.Rows.Count == 1 )
+          
+            if(Forma.DataBaseManager.VerifyUser(user,pass)==true)
             {
-                ControlData.Username = user;
-
-                ControlData.korisnikID = (int)result[0][4];
-
-                DataTable tipResult = tip_korisnikaTableAdapter1.GetTipKorisnikabyID((int)result[0][4]);
-
-                ControlData.tipKorisnika = tipResult.Rows[0][1].ToString();
-
                 this.DialogResult = System.Windows.Forms.DialogResult.OK;
             }
             else
+            {
                 MessageBox.Show("Korisnički podaci nisu ispravni. Provjerite velika/mala slova i pokušajte ponovo");
-        }
-
-        private void LoginForm_Load(object sender, EventArgs e)
-        {
-            korisnikTableAdapter1.Connection.ConnectionString = "Data Source=(LocalDB)\\v11.0;AttachDbFilename=" + ControlData.PathToMDF + ";Integrated Security=True;Connect Timeout=30";
-            tip_korisnikaTableAdapter1.Connection.ConnectionString = "Data Source=(LocalDB)\\v11.0;AttachDbFilename=" + ControlData.PathToMDF + ";Integrated Security=True;Connect Timeout=30";
+            }
         }
     }
 }

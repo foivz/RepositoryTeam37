@@ -76,8 +76,9 @@ Copyright (C) Microsoft Corporation. All rights reserved.
     
     <!-- Build the non-XACT content. -->
     <BuildContent
+      ContentProjectGUID="$(ProjectGUID)"
       BuildConfiguration="$(Configuration)"
-      IntermediateDirectory="$(ProjectDir)$(IntermediateOutputPath)"
+      IntermediateDirectory="$(ParentIntermediateDir)"
       OutputDirectory="$(ParentOutputDir)$(ContentRootDirectory)"
       PipelineAssemblies="@(ReferencePath)"
       PipelineAssemblyDependencies="@(ReferenceDependencyPaths)"
@@ -95,8 +96,9 @@ Copyright (C) Microsoft Corporation. All rights reserved.
 
     <!-- Build the XACT content. -->
     <BuildXact
+      ContentProjectGUID="$(ProjectGUID)"
       BuildConfiguration="$(Configuration)"
-      IntermediateDirectory="$(ProjectDir)$(IntermediateOutputPath)"
+      IntermediateDirectory="$(ParentIntermediateDir)"
       OutputDirectory="$(ParentOutputDir)$(ContentRootDirectory)"
       RebuildAll="$(XNARebuildContent)"
       RootDirectory="$(ProjectDir)"
@@ -220,8 +222,9 @@ Copyright (C) Microsoft Corporation. All rights reserved.
   <Target Name="XNAContentClean">
 
     <CleanContent
+      ContentProjectGUID="$(ProjectGUID)"
       BuildConfiguration="$(Configuration)"
-      IntermediateDirectory="$(ProjectDir)$(IntermediateOutputPath)"
+      IntermediateDirectory="$(ParentIntermediateDir)"
       OutputDirectory="$(ParentOutputDir)$(ContentRootDirectory)"
       RootDirectory="$(ProjectDir)"
       TargetPlatform="$(XNAContentPipelineTargetPlatform)"
@@ -256,7 +259,8 @@ Copyright (C) Microsoft Corporation. All rights reserved.
     Outputs="@(BuiltContentWithTargetPaths)">
 
     <GetLastOutputs
-      IntermediateDirectory="$(ProjectDir)$(IntermediateOutputPath)">
+      ContentProjectGUID="$(ProjectGUID)"
+      IntermediateDirectory="$(ParentIntermediateDir)">
       <Output TaskParameter="OutputContentFiles" ItemName="LastBuiltContentFiles" />
     </GetLastOutputs>
 

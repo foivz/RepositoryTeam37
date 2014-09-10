@@ -98,14 +98,13 @@ namespace WindowsGame1.Data
             for ( int i = 0; i < texturePaths.Count; i++ )
             {
                 contentBuilder.Add(texturePaths[i], "tex" + i.ToString(), null, "TextureProcessor");
-               
             }
 
             string error = contentBuilder.Build();
 
             ControlData.LOADING = true;
 
-            if ( string.IsNullOrEmpty(error) )
+            if (string.IsNullOrEmpty(error))
             {
                 //Pošto koristimo jedan statični mesh u Rendereru, moramo prvo Unloadati sve.
                 Game1.content.Unload();

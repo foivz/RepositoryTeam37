@@ -1,6 +1,6 @@
-Content\Shaders\GenericShader.xnb
-Content\Models\cubeUV.xnb
-Content\Textures\avatar.xnb
 Content\Textures\Cursor.xnb
-Content\Fonts\FullscreenFont.xnb
+Content\Textures\avatar.xnb
+Content\Shaders\GenericShader.xnb
 Content\Shaders\TransparentShader.xnb
+Content\Models\cubeUV.xnb
+Content\Fonts\FullscreenFont.xnb

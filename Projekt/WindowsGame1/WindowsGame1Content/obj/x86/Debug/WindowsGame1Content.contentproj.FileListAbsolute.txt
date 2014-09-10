@@ -1,3 +1,6 @@
 C:\Users\Nikola\Documents\Visual Studio 2010\Projects\WindowsGame1\WindowsGame1\WindowsGame1Content\obj\x86\Debug\WindowsGame1Content.contentprojResolveAssemblyReference.cache
 D:\Code projects\Projekt_PI\WindowsGame1\WindowsGame1Content\obj\x86\Debug\WindowsGame1Content.contentprojResolveAssemblyReference.cache
 C:\Users\Eudaimonium\Documents\GitHub\RepositoryTeam37\Projekt\WindowsGame1\WindowsGame1Content\obj\x86\Debug\WindowsGame1Content.contentprojResolveAssemblyReference.cache
+C:\Users\Marita\Desktop\pi ponovo\RepositoryTeam37-master\Projekt\WindowsGame1\WindowsGame1Content\obj\x86\Debug\WindowsGame1Content.contentprojResolveAssemblyReference.cache
+C:\Users\Marita\Google disk\FOI\PI\Baza 3d modela\RepositoryTeam37-master\Projekt\WindowsGame1\WindowsGame1Content\obj\x86\Debug\WindowsGame1Content.contentprojResolveAssemblyReference.cache
+D:\Shared\RepositoryTeam37-master\Projekt\WindowsGame1\WindowsGame1Content\obj\x86\Debug\WindowsGame1Content.contentprojResolveAssemblyReference.cache

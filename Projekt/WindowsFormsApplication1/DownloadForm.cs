@@ -54,7 +54,7 @@ namespace WindowsFormsApplication1
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btbDownload_click(object sender, EventArgs e)
         {
             //Kad kliknemo download, moramo odrediti sljedeće:
             // - što je sve označeno u checkboxevima
